@@ -14,14 +14,14 @@
     display: none;
   }
 }
-body { background: url(../images/upload/images/Ba_Vi.jpg) top center fixed; background-size: cover; font-size: 12px; color: #620600; font-family: Arial, Helvetica, sans-serif; }
+body { background: url(../images/Ba_Vi.jpg) top center fixed; background-size: cover; font-size: 12px; color: #620600; font-family: Arial, Helvetica, sans-serif; }
 
-#header .top-header { background: url(../images/upload/images/body_bg.png) top left repeat; display: table; width: 100%; padding: 2px; color: #f4e318; }
+#header .top-header { background: url(../images/body_bg.png) top left repeat; display: table; width: 100%; padding: 2px; color: #f4e318; }
 #header .top-header h1 { font-size: 14px; margin-bottom: 0px; margin-top: 10px; text-transform: uppercase; }
 #header .top-header h2 { font-size: 14px; margin-bottom: 10px; margin-top: 10px; text-transform: uppercase; }
 #header .top-header .wp-top-header { width: 100%; display: table; border: 4px double #f4e318; }
 #header .mid-header img { width: 100%; }
-#header .bot-header { background: url(../images/upload/images/body_bg.png) top left repeat; }
+#header .bot-header { background: url(../images/body_bg.png) top left repeat; }
 #header .bot-header .navbar_header .navbar-default { background-color: transparent !important; border: none; }
 #header .bot-header .navbar_header .navbar-toggle { border-radius: 0px !important; }
 
@@ -29,7 +29,7 @@ body { background: url(../images/upload/images/Ba_Vi.jpg) top center fixed; back
 .navbar-default .navbar-heade .navbar-toggle { border-radius: 0px !important; }
 .navbar-default .navbar-collapse ul li a { color: #FFF; font-weight: bold; font-size: 14px; }
 .navbar-default .navbar-collapse ul li a:hover { color: yellow; background: none; }
-.navbar-default .navbar-collapse ul li ul.dropdown-menu { background: url(../images/upload/images/body_bg.png) top left repeat !important; }
+.navbar-default .navbar-collapse ul li ul.dropdown-menu { background: url(../images/body_bg.png) top left repeat !important; }
 .navbar-default .navbar-collapse ul li ul.dropdown-menu li { padding: 3px 5px; }
 .navbar-default .navbar-collapse ul li ul.dropdown-menu li a { border-top: 1px dotted #CCC; }
 .navbar-default .navbar-collapse ul .active a { color: yellow; background: none; }
@@ -43,7 +43,7 @@ body { background: url(../images/upload/images/Ba_Vi.jpg) top center fixed; back
     padding: 3px 10px;
 }
 
-@media (min-width: 1200px) { .bot-header .navbar_header { min-height: 55px; padding-top: 10px; background: url(../images/upload/images/menu.png) center center no-repeat; }
+@media (min-width: 1200px) { .bot-header .navbar_header { min-height: 55px; padding-top: 10px; background: url(../images/menu.png) center center no-repeat; }
   .bot-header .navbar_header .navbar-default { background-color: none !important; }
   .bot-header .navbar_header .navbar-default .navbar-collapse ul.navbar-nav { display: table; margin: auto; float: none !important; } }
 @media (min-width: 768px) { .dropdown-menu .sub-menu { left: 100%; position: absolute; top: 0px; visibility: hidden; margin-top: -1px; -webkit-transition: all 0.5s; transition: all 0.5s; }

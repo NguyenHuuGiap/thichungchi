@@ -15,6 +15,6 @@
 //= require jquery.min
 //= require zoom-img
 //= require bootstrap.min
-
+//= require bootstrap-sprockets
 
 //= require_tree .
