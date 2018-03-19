@@ -1,6 +1,15 @@
 class HomeController < ApplicationController
-  # skip_load_and_authorize_resource only: :index
+  before_action :load_categories, :load_news
 
   def index
+  end
+
+  private
+  def load_categories
+    @categories = Categories.all
+  end
+
+  def load_news
+    @news = New.all
   end
 end
