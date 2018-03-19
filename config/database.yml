@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: judoda09
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: gia_pha_development
+
+test:
+  <<: *default
+  database: gia_pha_test
+
+production:
+  <<: *default
+  database: gia_pha_production
+  username: gia_pha
+  password: <%= ENV['FTMS_DATABASE_PASSWORD'] %>
