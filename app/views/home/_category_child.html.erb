@@ -1,0 +1,9 @@
+<ul class="dropdown-menu">
+  <% cat_parent.children.each do |child| %>
+    <li>
+      <%= link_to category_path(child) do %>
+        <%= child.name %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
