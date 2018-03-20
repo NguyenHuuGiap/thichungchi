@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require jquery.min
+//= require jquery.fancybox.min
 //= require zoom-img
 //= require bootstrap.min
 //= require bootstrap-sprockets

@@ -10,9 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require jquery.fancybox-buttons
- *= require jquery.fancybox-thumbs
- *= require jquery.fancybox
+ *= require jquery.fancybox.min
  *= require bootstrap.min
  *= require_tree .
  *= require_self
