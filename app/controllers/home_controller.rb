@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
   private
   def load_categories
-    @categories = Categories.all
+    @categories = Category.all
   end
 
   def load_news
