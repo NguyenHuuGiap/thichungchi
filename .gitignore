@@ -17,6 +17,12 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore pow environment settings
+.powenv
+
+/config/database.local.yml
+/config/local_env.yml
+
 /node_modules
 /yarn-error.log
 
