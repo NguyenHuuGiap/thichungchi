@@ -17,17 +17,19 @@ ActiveRecord::Schema.define(version: 20180319044403) do
     t.text "description"
     t.integer "parent"
     t.integer "pattern"
+    t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "news", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.text "content"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id"
-    t.index ["category_id"], name: "index_news_on_category_id"
+    t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
 end

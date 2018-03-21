@@ -10,12 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
 //= require jquery.min
 //= require jquery.fancybox.min
 //= require zoom-img
 //= require go.js
 //= require go-debug.js
 //= require bootstrap.min
-
-//= require_tree .
+//= require analytics.js
+//= require main.js

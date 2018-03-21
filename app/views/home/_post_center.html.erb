@@ -1,0 +1,42 @@
+<% @category_selected.each do |category| %>
+  <div class="new_center box-center">
+    <div class="box-header">
+      <span><%= category.name %></span>
+    </div>
+    <div class="box-body">
+      <% category.posts.each_with_index do |post, index| %>
+        <% if index.zero? %>
+          <div class="list_new">
+            <div class="col-md-4 no-left">
+              <div class="img_left">
+                <%= link_to image_tag("IMG_7151.JPG", alt: "Image Description"), category_post_path(category, post) %>
+              </div>
+            </div>
+            <div class="col-md-8 no-left">
+              <div class="content_new">
+                <h2>
+                  <%= link_to category_post_path(category, post) do %>
+                    <%= post&.title %>
+                  <% end %>
+                </h2>
+                <p>
+                  <%= post&.content&.truncate 150, omission: '...'  %>
+                </p>
+              </div>
+            </div>
+          </div>
+        <% else %>
+           <div class="col-md-12">
+             <ul class="list-unstyled list_bottom">
+               <li>
+                 <%= link_to category_post_path(category, post) do %>
+                   <%= post&.title %>
+                 <% end %>
+               </li>
+             </ul>
+           </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
