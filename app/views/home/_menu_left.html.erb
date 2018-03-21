@@ -3,15 +3,12 @@
 </div>
 <div class="box-content">
    <ul class="list-unstyled">
-      <li><a href="/news/gia-pha-cac-chi-ho">Gia phả các chi họ</a></li>
-      <li><a href="/news/dieu-le">ĐIỀU LỆ</a></li>
-      <li><a href="/news/ket-noi-dong-ho">Kết nối dòng họ</a></li>
-      <li><a href="/news/thong-bao-hoat-dong">THÔNG BÁO HOẠT ĐỘNG</a></li>
-      <li><a href="/news/hoi-nguoi-ho-nguyen-cap-tinh">Hội người họ Nguyễn cấp tỉnh</a></li>
-      <li><a href="/news/sach-ve-ho-nguyen">Sách về họ nguyễn</a></li>
-      <li><a href="/news/tai-tro-dong-gop">TÀI TRỢ ĐÓNG GÓP</a></li>
-      <li><a href="/news/thong-bao-tai-chinh">THÔNG BÁO TÀI CHÍNH</a></li>
-      <li><a href="/news/clb-tuoi-tre-ho-nguyen">CLB tuổi trẻ họ Nguyễn</a></li>
-      <li><a href="/news/sach-truyen-tho-ve-ho-nguyen">Sách, truyện, thơ về họ nguyễn</a></li>
+      <% @category_node.each do |cat_node| %>
+        <li>
+          <%= link_to category_path(cat_node) do %>
+            <%= cat_node.name %>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
 </div>

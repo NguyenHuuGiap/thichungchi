@@ -6,7 +6,8 @@ class HomeController < ApplicationController
 
   private
   def load_categories
-    @categories = Category.all
+    @category_parents = Category.category_node(0).category_parent.includes :children
+    @category_node = Category.category_node(1)
   end
 
   def load_news

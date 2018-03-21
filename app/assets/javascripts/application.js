@@ -14,6 +14,8 @@
 //= require jquery.min
 //= require jquery.fancybox.min
 //= require zoom-img
+//= require go.js
+//= require go-debug.js
 //= require bootstrap.min
 
 //= require_tree .
