@@ -1,27 +1,25 @@
 jQuery(document).ready(function() {
   init();
   function init() {
-    if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
-    var $ = go.GraphObject.make;  // for conciseness in defining templates
-
+    if (window.goSamples) goSamples();
+    var $ = go.GraphObject.make;
     myFullDiagram =
-      $(go.Diagram, "fullDiagram",  // each diagram refers to its DIV HTML element by id
+      $(go.Diagram, "fullDiagram",
         {
-          initialAutoScale: go.Diagram.UniformToFill,  // automatically scale down to show whole tree
+          initialAutoScale: go.Diagram.UniformToFill,
           "toolManager.hoverDelay": 100,
           maxScale: 0.25,
-          contentAlignment: go.Spot.Center,  // center the tree in the viewport
-          isReadOnly: true,  // don't allow user to change the diagram
+          contentAlignment: go.Spot.Center,
+          isReadOnly: true,
           "animationManager.isEnabled": false,
           "resizingTool.isGridSnapEnabled": true,
           layout: $(go.TreeLayout,
                     { angle: 90, sorting: go.TreeLayout.SortingAscending }),
-          maxSelectionCount: 1,  // only one node may be selected at a time in each diagram
-          // when the selection changes, update the myLocalDiagram view
+          maxSelectionCount: 1,
           "ChangedSelection": showLocalOnFullClick
         });
 
-    myLocalDiagram =  // this is very similar to the full Diagram
+    myLocalDiagram =
       $(go.Diagram, "localDiagram",
         {
           autoScale: go.Diagram.UniformToFill,
@@ -35,7 +33,6 @@ jQuery(document).ready(function() {
           },
           maxSelectionCount: 1,
           "toolManager.hoverDelay": 100,
-          // when the selection changes, update the contents of the myLocalDiagram
           "ChangedSelection": showLocalOnLocalClick
         });
 
@@ -51,11 +48,10 @@ jQuery(document).ready(function() {
           stroke: stroke
         });
     };
-    // Define a node template that is shared by both diagrams
     var myNodeTemplate =
       $(go.Node, "Auto",
         { locationSpot: go.Spot.Center },
-        new go.Binding("text", "key", go.Binding.toString),  // for sorting
+        new go.Binding("text", "key", go.Binding.toString),
         $(go.Shape, "Rectangle",
           new go.Binding("fill", "color"),
           { stroke: null }),
@@ -87,8 +83,6 @@ jQuery(document).ready(function() {
         {
           toolTip:
             $(go.Adornment, "Auto",
-              new go.Binding("visible", "key",
-                function(t) { return t > 0; }),
               shapeStyle("SHAPE", "green", null),
               $(go.Panel, "Horizontal",
                 $(go.Picture,
@@ -152,7 +146,6 @@ jQuery(document).ready(function() {
     myFullDiagram.nodeTemplate = myNodeTemplate;
     myLocalDiagram.nodeTemplate = myNodeTemplate;
 
-    // Define a basic link template, not selectable, shared by both diagrams
     var myLinkTemplate =
       $(go.Link,
         { routing: go.Link.Normal, selectable: false },
@@ -162,10 +155,8 @@ jQuery(document).ready(function() {
     myFullDiagram.linkTemplate = myLinkTemplate;
     myLocalDiagram.linkTemplate = myLinkTemplate;
 
-    // Create the full tree diagram
     setupDiagram();
 
-    // Create a part in the background of the full diagram to highlight the selected node
     highlighter =
       $(go.Part, "Auto",
         {
@@ -183,8 +174,6 @@ jQuery(document).ready(function() {
         );
     myFullDiagram.add(highlighter);
 
-    // Start by focusing the diagrams on the node at the top of the tree.
-    // Wait until the tree has been laid out before selecting the root node.
     myFullDiagram.addDiagramListener("InitialLayoutCompleted", function(e) {
       var node0 = myFullDiagram.findPartForKey(0);
       if (node0 !== null) node0.isSelected = true;
@@ -192,12 +181,9 @@ jQuery(document).ready(function() {
     });
   }
 
-  // Make the corresponding node in the full diagram to that selected in the local diagram selected,
-  // then call showLocalOnFullClick to update the local diagram.
   function showLocalOnLocalClick() {
     var selectedLocal = myLocalDiagram.selection.first();
     if (selectedLocal !== null) {
-      // there are two separate Nodes, one for each Diagram, but they share the same key value
       myFullDiagram.select(myFullDiagram.findPartForKey(selectedLocal.data.key));
     }
   }
@@ -205,15 +191,10 @@ jQuery(document).ready(function() {
   function showLocalOnFullClick() {
     var node = myFullDiagram.selection.first();
     if (node !== null) {
-      // make sure the selected node is in the viewport
       myFullDiagram.scrollToRect(node.actualBounds);
-      // move the large yellow node behind the selected node to highlight it
       highlighter.location = node.location;
-      // create a new model for the local Diagram
       var model = new go.TreeModel();
-      // add the selected node and its children and grandchildren to the local diagram
-      var nearby = node.findTreeParts(3);  // three levels of the (sub)tree
-      // add parent and grandparent
+      var nearby = node.findTreeParts(3);
       var parent = node.findTreeParentNode();
       if (parent !== null) {
         nearby.add(parent);
@@ -222,33 +203,17 @@ jQuery(document).ready(function() {
           nearby.add(grandparent);
         }
       }
-      // create the model using the same node data as in myFullDiagram's model
       nearby.each(function(n) {
           if (n instanceof go.Node) model.addNodeData(n.data);
         });
       myLocalDiagram.model = model;
-      // select the node at the diagram's focus
       var selectedLocal = myLocalDiagram.findPartForKey(node.data.key);
       if (selectedLocal !== null) selectedLocal.isSelected = true;
     }
   }
 
-  // Create the tree model containing TOTAL nodes, with each node having a variable number of children
   function setupDiagram(total) {
-    // if (total === undefined) total = 100;  // default to 100 nodes
     var nodeDataArray = [];
-    // for (var i = 0; i < total; i++) {
-    //   nodeDataArray.push({
-    //     key: nodeDataArray.length,
-    //     color: go.Brush.randomColor()
-    //   });
-    // }
-    // var j = 0;
-    // for (var i = 1; i < total; i++) {
-    //   var data = nodeDataArray[i];
-    //   data.parent = j;
-    //   if (Math.random() < 0.3) j++;  // this controls the likelihood that there are enough children
-    // }
     nodeDataArray = [
       {key: 0, color: "#85b793", name: "A", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11},
       {key: 1, color: "#a0d8b6", name: "B", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 0},
