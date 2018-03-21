@@ -1,75 +1,22 @@
-<body>
-    <div class="container" id="header">
-      <%= render "menu" %>
-    </div>
-    <div class="container " id="content">
-       <div class="row">
-          <div class="col-md-3 no-left">
-            <div class="menu_left box">
-              <%= render "menu_left" %>
-            </div>
-            <div class="video_left box">
-              <%= render "menu_video" %>
-            </div>
-            <div class="new_left_nobg box merit">
-              <%= render "menu_cong_duc" %>
-            </div>
-            <div class="new_left box statistics">
-               <div class="box-heading">
-                  <span>Thống kê truy cập</span>
-               </div>
-               <div class="box-content">
-                 <ul class="list-unstyled">
-                    <li><a href="#">Online : <strong>3</strong></a></li>
-                    <li><a href="#">Số lượt truy cập: <strong>2.760.662</strong></a></li>
-                  </ul>
-               </div>
-            </div>
+<div class="col-md-6 no-padding">
+  <div class="box-center">
+    <div class="box-header"></div>
+    <div class="box-body">
+      <div id="carousel-example-center" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <a class="fancybox-buttons" data-fancybox-group="button" href="/upload/slideshow/2079227306_anh21.jpg">
+              <%= image_tag "2079227306_anh21.jpg", alt: "" %>
+            </a>
           </div>
-            <div class="col-md-6 no-padding">
-              <div class="box-center">
-                <div class="box-header"></div>
-                <div class="box-body">
-                  <div id="carousel-example-center" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                      <div class="item active">
-                        <a class="fancybox-buttons" data-fancybox-group="button" href="/upload/slideshow/2079227306_anh21.jpg">
-                          <%= image_tag "2079227306_anh21.jpg", alt: "" %>
-                        </a>
-                      </div>
-                      <div class="item">
-                        <a class="fancybox-buttons" data-fancybox-group="button" href="upload/images/1187712276_thanhtanvien.jpg">
-                          <%= image_tag "1187712276_thanhtanvien.jpg", alt: "" %>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="new_center box-center">
-                <%= render "menu_noti" %>
-              </div>
-              <div class="new_center box-center">
-                <%= render "menu_danh_nhan" %>
-              </div>
-              <div class="new_center box-center">
-                <%= render "menu_lich_su" %>
-              </div>
-            </div>
-            <div class="col-md-3 no-right">
-              <div class="new_left box">
-                <%= render "menu_thu_vien_anh" %>
-              </div>
-              <div class="new_left box">
-                <%= render "menu_noti_action" %>
-              </div>
-              <div class="new_left box">
-                <%= render "menu_news" %>
-              </div>
-            </div>
+          <div class="item">
+            <a class="fancybox-buttons" data-fancybox-group="button" href="upload/images/1187712276_thanhtanvien.jpg">
+              <%= image_tag "1187712276_thanhtanvien.jpg", alt: "" %>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="container" id="footer">
-      <%= render "footer" %>
-    </div>
-</body>
+  </div>
+  <%= render "post_center" %>
+</div>

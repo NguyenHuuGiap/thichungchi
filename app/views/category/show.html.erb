@@ -1,0 +1,33 @@
+<div class="col-md-6 no-padding">
+  <div class="new_center box-center">
+    <div class="box-header">
+      <span><%= @category.name %></span>
+    </div>
+    <div class="box-body">
+      <div class="col-md-12">
+        <% @posts.each do |post| %>
+          <div class="col-md-12 col-sm-6 col-xs-12 no-right each_post">
+            <div class="col-md-3 thumbail">
+              <%= link_to image_tag(post&.image, alt: "Image Description", class: "w-100"), category_post_path(@category, post) %>
+            </div>
+            <div class="col-md-9 text">
+              <p>
+                <%= link_to category_post_path(@category, post) do %>
+                  <%= post.title %>
+                <% end %>
+              </p>
+              <p class="text-right">
+                <%= link_to category_post_path(@category, post) do %>
+                  Chi Tiết
+                <% end %>
+              </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="row paging" style="text-align: center;">
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</div>

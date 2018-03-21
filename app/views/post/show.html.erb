@@ -1,0 +1,36 @@
+<div class="col-md-6 no-padding">
+  <div class="new_center box-center">
+    <div class="box-header">
+       <span><%= @category&.name %></span>
+    </div>
+    <div class="box-body text_in_content">
+      <p></p>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <img alt="Image Description" src="<%= @post&.image %>">
+        </div>
+        <div class="col-md-8">
+          <span style="color: #1f1f1f"><%= @post&.title %></span><br><br>
+          <span style="color: #1f1f1f" class="glyphicon glyphicon-time" aria-hidden="true"></span>
+          <span style="color: #1f1f1f">Ngày đăng: <%= @post.created_at %></span>
+          <br>
+          <u><i style="color: #1f1f1f">Tóm tắt:</i></u>
+          <p>
+            <span style="font-size:14px">
+              <strong>
+                <%= @post&.content.truncate(250, omission: '...') %>
+              </strong>
+            </span>
+          </p>
+        </div>
+      </div>
+      <p></p>
+      <p style="color: #1f1f1f"><u><i>Nội dung:</i></u></p>
+      <p></p>
+      <p>
+        <%= @post&.content %>
+      </p>
+     </div>
+  </div>
+  <%= render "related_posts" %>
+</div>

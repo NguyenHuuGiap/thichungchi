@@ -1,0 +1,18 @@
+<div class="new_center box-center">
+  <div class="box-header">
+    <span>Các tin bài khác:</span>
+  </div>
+  <div class="box-body">
+    <div class="col-md-12">
+      <ul class="list-unstyled list_bottom">
+        <% @relared_posts.each do |post| %>
+          <li>
+            <%= link_to category_post_path(@category, post) do %>
+              <%= post&.title&.truncate 100, omission: '...' %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
