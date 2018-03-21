@@ -1,4 +1,5 @@
-home = Category.create! name: "Trang Chu", description: "trang chu", pattern: 0
+require 'faker'
+
 gioithieu = Category.create! name: "Gioi Thieu", description: "gioi thieu", pattern: 0
 tintuc = Category.create! name: "Tin Tuc", description: "Tin tuc", pattern: 0
 lichsu = Category.create! name: "Lich Su", description: "Lich su", pattern: 0
@@ -19,7 +20,7 @@ Category.create! name: "Lich Su Dong Ho", description: "Lich su dong ho", patter
 Category.create! name: "Gia Phả Các Chi Họ", description: "Gia phả các chi họ", pattern: 1
 Category.create! name: "Điều Lệ", description: "Điều lệ", pattern: 1
 Category.create! name: "Kết Nối Dòng Họ", description: "Kết nối dòng họ", pattern: 1
-Category.create! name: "Thông Báo Hoạt Động", description: "Thông Báo Hoạt Động", pattern: 1, position: 0
+hd = Category.create! name: "Thông Báo Hoạt Động", description: "Thông Báo Hoạt Động", pattern: 2, position: 0
 Category.create! name: "Hội Người Họ Nguyễn Cấp Tỉnh", description: "Hội Người Họ Nguyễn Cấp Tỉnh", pattern: 1
 Category.create! name: "Sách Về Họ Nguyễn", description: "Sách Về Họ Nguyễn", pattern: 1
 Category.create! name: "Tài Trợ, Đóng Góp", description: "Tài trợ đóng góp", pattern: 1
@@ -27,4 +28,9 @@ Category.create! name: "Thông Báo Tài Chính", description: "Thông báo tài
 Category.create! name: "CLB Tuổi Trẻ Họ Nguyễn", description: "CLB Tuổi Trẻ Họ Nguyễn", pattern: 1
 Category.create! name: "Sách Truyện Thơ Về Họ Nguyễn", description: "Sách Truyện Thơ Về Họ Nguyễn", pattern: 1
 
-Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", category_id: 15
+Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", category: hd, image: Faker::Avatar.image
+Category.all.each do |category|
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.ordered_list, category: category, image: Faker::Avatar.image
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.unordered_list, category: category, image: Faker::Avatar.image
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.inline_code, category: category, image: Faker::Avatar.image
+end

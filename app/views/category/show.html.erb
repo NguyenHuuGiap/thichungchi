@@ -8,7 +8,7 @@
         <% @posts.each do |post| %>
           <div class="col-md-12 col-sm-6 col-xs-12 no-right each_post">
             <div class="col-md-3 thumbail">
-              <%= link_to image_tag("http://honguyenvietnam.vn/uploads/files/IMG_1995.JPG", alt: "Image Description", class: "w-100"), category_post_path(@category, post) %>
+              <%= link_to image_tag(post&.image, alt: "Image Description", class: "w-100"), category_post_path(@category, post) %>
             </div>
             <div class="col-md-9 text">
               <p>

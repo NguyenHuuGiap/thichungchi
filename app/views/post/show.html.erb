@@ -7,7 +7,7 @@
       <p></p>
       <div class="col-md-12">
         <div class="col-md-4">
-          <%= image_tag @post&.image, alt: "" %>
+          <img alt="Image Description" src="<%= @post&.image %>">
         </div>
         <div class="col-md-8">
           <span style="color: #1f1f1f"><%= @post&.title %></span><br><br>
@@ -26,7 +26,10 @@
       </div>
       <p></p>
       <p style="color: #1f1f1f"><u><i>Nội dung:</i></u></p>
-      <p></p><p>
+      <p></p>
+      <p>
+        <%= @post&.content %>
+      </p>
      </div>
   </div>
   <%= render "related_posts" %>
