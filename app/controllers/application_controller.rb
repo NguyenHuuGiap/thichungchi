@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   def load_posts
     @post_news = Post.order(created_at: :desc).limit 10
   end
+
+  def load_attachments
+    @post_news = Post.order(created_at: :desc).limit 10
+  end
 end
