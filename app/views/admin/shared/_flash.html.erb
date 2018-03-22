@@ -1,0 +1,15 @@
+<% flash.each do |key, value| %>
+  <% next unless %w(success notice danger error alert).include? key %>
+  <div class="grid alert <%= Settings.alert[key] %> alert--dismissable">
+    <h4 class="grid__item--full">
+      <% if %w(success notice).include? key %>
+        <i class="icon fa fa-check"></i>
+      <% else %>
+        <i class="icon fa fa-warning"></i>
+      <% end %>
+      <%= value.presence %>
+    </h4>
+    <button aria-hidden="true" data-dismiss="alert"
+      class="alert__close alert__close--color alert__close--position" type="button">×</button>
+  </div>
+<% end %>

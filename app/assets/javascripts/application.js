@@ -16,5 +16,12 @@
 //= require go.js
 //= require go-debug.js
 //= require bootstrap.min
+//= require metisMenu.min
 //= require analytics.js
 //= require main.js
+//= require sb-admin-2.js
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap.min
+//= require dataTables.responsive
+//= require ajax_send_data
+//= require froala_editor.min.js

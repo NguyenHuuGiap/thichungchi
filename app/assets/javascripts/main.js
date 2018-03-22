@@ -7,4 +7,12 @@ $(document).ready(function(){
   $("#close_yt").click(function(){
     $("#view_yt").html( '' );
   });
+
+  loadDataTable('#dataTables-allpage');
 });
+
+function loadDataTable(id_name) {
+  $(id_name).DataTable({
+    responsive: true
+  });
+}
