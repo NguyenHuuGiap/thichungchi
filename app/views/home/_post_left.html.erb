@@ -1,0 +1,19 @@
+<% @category_lefts.each do |category_left| %>
+  <div class="box-heading">
+      <span><%= category_left&.name %></span>
+  </div>
+  <div class="box-content content_merit">
+    <ul class="list-unstyled">
+      <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+        <% category_left.posts.each do |post| %>
+        <li>
+          <%= link_to image_tag(post&.image, alt: "Image Description", class: "nopadding"), category_post_path(category_left, post) %>
+          <%= link_to category_post_path(category_left, post) do %>
+            <%= post&.title %>
+          <% end %>
+        </li>
+        <% end %>
+      </marquee>
+    </ul>
+  </div>
+<% end %>
