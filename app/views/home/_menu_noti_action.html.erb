@@ -1,14 +1,16 @@
-<div class="box-heading">
-  <span><%= @category_right&.name %></span>
-</div>
-<div class="box-content">
-  <ul class="list-unstyled">
-    <% @category_right&.posts&.each do |post| %>
-      <li>
-        <%= link_to category_post_path(@category_right, post) do %>
-          <%= post&.title %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<% @category_rights.each do |category| %>
+  <div class="box-heading">
+    <span><%= category&.name %></span>
+  </div>
+  <div class="box-content">
+    <ul class="list-unstyled">
+      <% category&.posts&.each do |post| %>
+        <li>
+          <%= link_to category_post_path(category, post) do %>
+            <%= post&.title %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

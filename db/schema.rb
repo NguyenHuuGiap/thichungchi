@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20180321100044) do
   create_table "attachments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "attachment"
     t.string "target_type"
-    t.string "target_id"
+    t.integer "target_id"
     t.integer "pattern"
     t.string "description"
     t.string "name"

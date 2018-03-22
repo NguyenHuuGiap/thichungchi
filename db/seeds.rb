@@ -5,6 +5,7 @@ tintuc = Category.create! name: "Tin Tuc", description: "Tin tuc", pattern: 0
 lichsu = Category.create! name: "Lich Su", description: "Lich su", pattern: 0
 thuvienanh = Category.create! name: "Thu Vien Anh", description: "Thu vien anh", pattern: 0
 lienhe = Category.create! name: "Liên Hệ", description: "Liên Hệ", pattern: 0
+Category.create! name: "Công Đức", description: "Công Đức", pattern: 3
 
 Category.create! name: "Gioi Thieu Chung", description: "gioi thieu chung", pattern: 0, parent: gioithieu.id
 Category.create! name: "Lich su hinh thanh", description: "Lich su hinh thanh", pattern: 0, parent: gioithieu.id, position: 2
