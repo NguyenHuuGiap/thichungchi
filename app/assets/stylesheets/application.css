@@ -12,13 +12,12 @@
  *
  *= require jquery.fancybox.min
  *= require bootstrap.min
+ *= require froala_editor.min.css
+ *= require froala_style.min.css
  *= require font-awesome
  *= require metisMenu.min
  *= require dataTables.bootstrap.css
  *= require dataTables.responsive.css
+ *= require modify.css
  *= require_self
  */
-
- @import "froala_editor.min";
- @import "froala_style.min";
- @import "font-awesome-sprockets";

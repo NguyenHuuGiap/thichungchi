@@ -1,0 +1,10 @@
+$('#myModal').html('<%= j render "form", post: @post %>');
+$('#myModal').addClass('in');
+$('#myModal').show();
+
+$('#comment').froalaEditor({
+  imageUploadParam: 'image_param',
+  imageUploadURL: '/admin/post/',
+  imageUploadMethod: 'GET',
+  imageAllowedTypes: ['jpeg', 'jpg', 'png']
+})

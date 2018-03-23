@@ -11,3 +11,16 @@
 .max-w73 {
   max-width: 73%;
 }
+
+.w-60 {
+  width: 80%;
+}
+
+.fr-wrapper {
+  max-height: 600px;
+  overflow: auto;
+}
+
+.margin-center {
+  margin: auto;
+}
