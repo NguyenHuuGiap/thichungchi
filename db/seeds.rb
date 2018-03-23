@@ -29,9 +29,9 @@ Category.create! name: "Thông Báo Tài Chính", description: "Thông báo tài
 Category.create! name: "CLB Tuổi Trẻ Họ Nguyễn", description: "CLB Tuổi Trẻ Họ Nguyễn", pattern: 1
 Category.create! name: "Sách Truyện Thơ Về Họ Nguyễn", description: "Sách Truyện Thơ Về Họ Nguyễn", pattern: 1
 
-Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", category: hd, image: Faker::Avatar.image
+Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", category: hd
 Category.all.each do |category|
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.ordered_list, category: category, image: Faker::Avatar.image
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.unordered_list, category: category, image: Faker::Avatar.image
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.inline_code, category: category, image: Faker::Avatar.image
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.ordered_list, category: category
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.unordered_list, category: category
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.inline_code, category: category
 end

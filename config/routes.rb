@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     root "dashboard#index"
     resources :category
     resources :post
+    resources :attachment, only: [:create, :destroy, :index]
   end
 end

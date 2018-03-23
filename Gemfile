@@ -28,7 +28,9 @@ gem "faker"
 gem "font-awesome-rails"
 gem "devise"
 gem 'ckeditor'
-gem "wysiwyg-rails"
+gem 'carrierwave'
+gem "mini_magick"
+gem "simple_form"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

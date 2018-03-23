@@ -30,7 +30,7 @@
           <td>
             <%= post&.content.truncate 250, omission: '...' %>
           </td>
-          <td><%= image_tag post.image, size: "80" %></td>
+          <td><%= image_tag(post&.logo&.url, size: "80") if post.logo.present? %></td>
           <td class="center"><%= post.created_at %></td>
           <td class="center"><%= post.updated_at %></td>
           <td class="center"><%= post&.category&.name %></td>
@@ -47,5 +47,5 @@
     </tbody>
   </table>
 </div>
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal" class="modal fade z-index-min" role="dialog">
 </div>
