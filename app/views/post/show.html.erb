@@ -18,7 +18,7 @@
           <p>
             <span style="font-size:14px">
               <strong>
-                <%= @post&.content.truncate(250, omission: '...') %>
+                <%= @post&.content.truncate(100, omission: '...') %>
               </strong>
             </span>
           </p>
@@ -28,7 +28,7 @@
       <p style="color: #1f1f1f"><u><i>Nội dung:</i></u></p>
       <p></p>
       <p>
-        <%= @post&.content %>
+        <%= raw @post&.content %>
       </p>
      </div>
   </div>

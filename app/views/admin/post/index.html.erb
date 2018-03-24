@@ -35,10 +35,10 @@
           <td class="center"><%= post.updated_at %></td>
           <td class="center"><%= post&.category&.name %></td>
           <td class="">
-            <a href="javascript:void(0)" data-id="<%= post.id %>" class="show_modal_post">
+            <a href="<%= admin_post_path post %>" data-id="<%= post.id %>" class="show_modal_post">
               <i class="fa fa-eye fa-fw"></i>
             </a>
-            <a href="javascript:void(0)" data-id="<%= post.id %>" class="edit_modal_post">
+            <a href="<%= edit_admin_post_path post %>" data-id="<%= post.id %>" class="edit_modal_post">
               <i class="fa fa-edit fa-fw"></i>
             </a>
           </td>

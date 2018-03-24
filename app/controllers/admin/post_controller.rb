@@ -6,11 +6,11 @@ class Admin::PostController < Admin::BaseController
   end
 
   def show
-    respond_to :js
+    render :show
   end
 
   def edit
-    respond_to :js
+    render :edit
   end
 
   def update

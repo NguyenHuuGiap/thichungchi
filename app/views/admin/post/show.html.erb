@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Detail Post</h1>
+  </div>
+  <div id="flash-message">
+    <%= render "admin/shared/flash", flash: flash %>
+  </div>
+</div>
+<div class="panel-body">
+    <div class="modal-body">
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Title</label>
+        <div class="col-10">
+          <%= @post.title %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Category</label>
+        <div class="col-10">
+          <%= @post.category.name %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Content</label>
+        <div class="col-10">
+          <%= raw @post&.content %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Logo</label>
+          <div class="col-10">
+            <div class="image-preview-css <%= @post.logo.present? ? "image-preview" : nil %>" data-background="<%= @post.logo %>"></div>
+            </br>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

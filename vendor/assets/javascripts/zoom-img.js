@@ -91,7 +91,7 @@
 				},
 
 				afterLoad : function() {
-					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+					this.title = 'Image ' + (this.index + 1) + ' of ' + (this.title ? ' - ' + this.title : '');
 				}
 			});
 
