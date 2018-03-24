@@ -24,4 +24,4 @@
 //= require dataTables.bootstrap.min
 //= require dataTables.responsive
 //= require ajax_send_data
-//= require froala_editor.min.js
+//= require froala_editor.pkgd.min.js

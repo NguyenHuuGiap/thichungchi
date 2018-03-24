@@ -7,7 +7,7 @@
       <p></p>
       <div class="col-md-12">
         <div class="col-md-4">
-          <img alt="Image Description" src="<%= @post&.image %>">
+          <img alt="Image Description" src="<%= @post&.logo %>">
         </div>
         <div class="col-md-8">
           <span style="color: #1f1f1f"><%= @post&.title %></span><br><br>
@@ -18,7 +18,7 @@
           <p>
             <span style="font-size:14px">
               <strong>
-                <%= @post&.content.truncate(250, omission: '...') %>
+                <%= @post&.content.truncate(100, omission: '...') %>
               </strong>
             </span>
           </p>
@@ -28,7 +28,7 @@
       <p style="color: #1f1f1f"><u><i>Nội dung:</i></u></p>
       <p></p>
       <p>
-        <%= @post&.content %>
+        <%= raw @post&.content %>
       </p>
      </div>
   </div>

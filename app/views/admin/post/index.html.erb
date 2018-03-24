@@ -30,12 +30,15 @@
           <td>
             <%= post&.content.truncate 250, omission: '...' %>
           </td>
-          <td><%= image_tag post.image, size: "80" %></td>
+          <td><%= image_tag(post&.logo&.url, size: "80") if post.logo.present? %></td>
           <td class="center"><%= post.created_at %></td>
           <td class="center"><%= post.updated_at %></td>
           <td class="center"><%= post&.category&.name %></td>
           <td class="">
-            <a href="javascript:void(0)" data-id="<%= post.id %>" class="show_modal_post">
+            <a href="<%= admin_post_path post %>" data-id="<%= post.id %>" class="show_modal_post">
+              <i class="fa fa-eye fa-fw"></i>
+            </a>
+            <a href="<%= edit_admin_post_path post %>" data-id="<%= post.id %>" class="edit_modal_post">
               <i class="fa fa-edit fa-fw"></i>
             </a>
           </td>
@@ -44,5 +47,5 @@
     </tbody>
   </table>
 </div>
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal" class="modal fade z-index-min" role="dialog">
 </div>
