@@ -6,5 +6,5 @@ class Category < ApplicationRecord
 
   scope :recent, -> {order position: :asc}
   scope :category_parent, -> {where parent: nil}
-  scope :category_node, ->pattern_id, id{where pattern: [pattern_id, id]}
+  scope :category_node, ->array_id{where pattern: array_id}
 end
