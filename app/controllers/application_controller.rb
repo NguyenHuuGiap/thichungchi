@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
 
   private
   def load_categories
-    @category_parents = Category.category_node(:top, nil).category_parent.includes :children
-    @category_node = Category.category_node :top_left, :right
+    @category_parents = Category.category_node([:top, nil]).category_parent.includes :children
+    @category_node = Category.category_node [:top_left, :right]
     @category_rights = Category.where(pattern: :right).includes :posts
     @category_lefts = Category.where(pattern: :left).includes :posts
   end
