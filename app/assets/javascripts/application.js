@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery.min
+//= require jquery_ujs
 //= require jquery.fancybox.min
 //= require zoom-img
 //= require go.js
