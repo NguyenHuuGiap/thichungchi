@@ -20,5 +20,6 @@
  *= require dataTables.responsive.css
  *= require modify.css
  *= require alert.css
+ *= require goSamples.css
  *= require_self
  */
