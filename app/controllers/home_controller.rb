@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    @category_selected = Category.where.not(position: nil).recent.includes :posts
+    @category_selected = Location.center&.first&.categories&.includes :posts
   end
 end

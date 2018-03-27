@@ -1,33 +1,57 @@
 require 'faker'
 
-gioithieu = Category.create! name: "Gioi Thieu", description: "gioi thieu", pattern: 0
-tintuc = Category.create! name: "Tin Tuc", description: "Tin tuc", pattern: 0
-lichsu = Category.create! name: "Lich Su", description: "Lich su", pattern: 0
-thuvienanh = Category.create! name: "Thu Vien Anh", description: "Thu vien anh", pattern: 0
-lienhe = Category.create! name: "Liên Hệ", description: "Liên Hệ", pattern: 0
-Category.create! name: "Công Đức", description: "Công Đức", pattern: 3
+#create location
+location_top = Location.create! name: "Menu Top", description: "Menu Top", pattern: 0
+location_left = Location.create! name: "Menu Left", description: "Menu Left", pattern: 1
+location_center = Location.create! name: "Menu center", description: "Menu Right", pattern: 2
 
-Category.create! name: "Gioi Thieu Chung", description: "gioi thieu chung", pattern: 0, parent: gioithieu.id
-Category.create! name: "Lich su hinh thanh", description: "Lich su hinh thanh", pattern: 0, parent: gioithieu.id, position: 2
-Category.create! name: "Gia Tri Coi Nguon", description: "Gia tri coi nguon", pattern: 0, parent: gioithieu.id
+#create category
+gioithieu = Category.create! name: "Giới Thiệu", description: "gioi thieu"
+tintuc = Category.create! name: "Sổ Gia Phả", description: "Sổ Gia Phả"
+lichsu = Category.create! name: "Tin Tức - Sự Kiện", description: "Tin Tức Sự Kiện"
+thuvienanh = Category.create! name: "Tư Liệu", description: "Tư Liệu"
+lienhe = Category.create! name: "Quỹ Công Đức", description: "Quỹ Công Đức"
+Category.create! name: "Liên Hệ", description: "Liên Hệ"
 
-Category.create! name: "Tin Tuc Trong Nuoc", description: "Tin tuc trong nuoc", pattern: 0, parent: tintuc.id
-Category.create! name: "Tin Tuc Quoc Te", description: "Tin tuc quoc te", pattern: 0, parent: tintuc.id
+Category.create! name: "Gioi Thieu Chung", description: "gioi thieu chung", parent: gioithieu.id
+Category.create! name: "Lich su hinh thanh", description: "Lich su hinh thanh", parent: gioithieu.id
+Category.create! name: "Gia Tri Coi Nguon", description: "Gia tri coi nguon", parent: gioithieu.id
 
-Category.create! name: "Danh Nhan Lich Su", description: "Danh nhan lich su noi tieng", pattern: 0, parent: lichsu.id, position: 1
-Category.create! name: "Lich Su Dong Ho", description: "Lich su dong ho", pattern: 0, parent: lichsu.id
+Category.create! name: "Tin Tuc Trong Nuoc", description: "Tin tuc trong nuoc", parent: tintuc.id
+Category.create! name: "Tin Tuc Quoc Te", description: "Tin tuc quoc te", parent: tintuc.id
 
+dn = Category.create! name: "Danh Nhan Lich Su", description: "Danh nhan lich su noi tieng", parent: lichsu.id
+ls = Category.create! name: "Lich Su Dong Ho", description: "Lich su dong ho", parent: lichsu.id
 
-Category.create! name: "Gia Phả Các Chi Họ", description: "Gia phả các chi họ", pattern: 1
-Category.create! name: "Điều Lệ", description: "Điều lệ", pattern: 1
-Category.create! name: "Kết Nối Dòng Họ", description: "Kết nối dòng họ", pattern: 1
-hd = Category.create! name: "Thông Báo Hoạt Động", description: "Thông Báo Hoạt Động", pattern: 2, position: 0
-Category.create! name: "Hội Người Họ Nguyễn Cấp Tỉnh", description: "Hội Người Họ Nguyễn Cấp Tỉnh", pattern: 1
-Category.create! name: "Sách Về Họ Nguyễn", description: "Sách Về Họ Nguyễn", pattern: 1
-Category.create! name: "Tài Trợ, Đóng Góp", description: "Tài trợ đóng góp", pattern: 1
-Category.create! name: "Thông Báo Tài Chính", description: "Thông báo tài chính", pattern: 1
-Category.create! name: "CLB Tuổi Trẻ Họ Nguyễn", description: "CLB Tuổi Trẻ Họ Nguyễn", pattern: 1
-Category.create! name: "Sách Truyện Thơ Về Họ Nguyễn", description: "Sách Truyện Thơ Về Họ Nguyễn", pattern: 1
+Category.create! name: "Gia Phả Các Chi Họ", description: "Gia phả các chi họ"
+Category.create! name: "Điều Lệ", description: "Điều lệ"
+Category.create! name: "Kết Nối Dòng Họ", description: "Kết nối dòng họ"
+hd = Category.create! name: "Thông Báo Hoạt Động", description: "Thông Báo Hoạt Động"
+Category.create! name: "Hội Người Họ Nguyễn Cấp Tỉnh", description: "Hội Người Họ Nguyễn Cấp Tỉnh"
+Category.create! name: "Sách Về Họ Nguyễn", description: "Sách Về Họ Nguyễn"
+Category.create! name: "Tài Trợ, Đóng Góp", description: "Tài trợ đóng góp"
+Category.create! name: "Thông Báo Tài Chính", description: "Thông báo tài chính"
+Category.create! name: "CLB Tuổi Trẻ Họ Nguyễn", description: "CLB Tuổi Trẻ Họ Nguyễn"
+Category.create! name: "Sách Truyện Thơ Về Họ Nguyễn", description: "Sách Truyện Thơ Về Họ Nguyễn"
+#create location category
+
+#menu top
+LocationCategory.create! position: 0, location: location_top, category: gioithieu
+LocationCategory.create! position: 1, location: location_top, category: tintuc
+LocationCategory.create! position: 2, location: location_top, category: lichsu
+LocationCategory.create! position: 3, location: location_top, category: thuvienanh
+LocationCategory.create! position: 4, location: location_top, category: lienhe
+
+#menu left
+LocationCategory.create! position: 0, location: location_left, category: hd
+LocationCategory.create! position: 1, location: location_left, category: lienhe
+LocationCategory.create! position: 2, location: location_left, category: lichsu
+
+#menu center
+LocationCategory.create! position: 0, location: location_center, category: hd
+LocationCategory.create! position: 1, location: location_center, category: dn
+LocationCategory.create! position: 2, location: location_center, category: ls
+
 
 Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", category: hd
 Category.all.each do |category|
