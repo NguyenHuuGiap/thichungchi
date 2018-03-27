@@ -14,42 +14,17 @@
         <%= render "home/menu" %>
       </div>
       <div class="container " id="content">
-         <div class="row">
-            <div class="col-md-3 no-left">
-              <div class="menu_left box">
-                <%= render "home/menu_left" %>
-              </div>
-              <div class="video_left box">
-                <%= render "home/menu_video" %>
-              </div>
-              <div class="new_left_nobg box merit">
-                <%= render "home/post_left" %>
-              </div>
-              <div class="new_left box statistics">
-                 <div class="box-heading">
-                    <span>Thống kê truy cập</span>
-                 </div>
-                 <div class="box-content">
-                   <ul class="list-unstyled">
-                      <li><a href="#">Online : <strong>3</strong></a></li>
-                      <li><a href="#">Số lượt truy cập: <strong>2.760.662</strong></a></li>
-                    </ul>
-                 </div>
-              </div>
-            </div>
-            <%= yield %>
-            <div class="col-md-3 no-right">
-              <div class="new_left box">
-                <%= render "home/menu_thu_vien_anh" %>
-              </div>
-              <div class="new_left box">
-                <%= render "home/menu_noti_action" %>
-              </div>
-              <div class="new_left box">
-                <%= render "home/menu_news" %>
-              </div>
-            </div>
-          </div>
+        <div class="row">
+           <div class="col-md-3 no-left">
+             <div class="new_left box">
+               <%= render "home/menu_thu_vien_anh" %>
+             </div>
+             <div class="new_left box">
+               <%= render "home/menu_noti_action" %>
+             </div>
+           </div>
+           <%= yield %>
+         </div>
       </div>
       <div class="container" id="footer">
         <%= render "layouts/footer" %>
