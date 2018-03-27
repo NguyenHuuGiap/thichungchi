@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Detail Post</h1>
+  </div>
+  <div id="flash-message">
+    <%= render "admin/shared/flash", flash: flash %>
+  </div>
+</div>
+<div class="panel-body">
+    <div class="modal-body">
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Title</label>
+        <div class="col-10">
+          <%= @category.name %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Category</label>
+        <div class="col-10">
+          <%= @category.description %>
+        </div>
+      </div>
+      </br>
+      </div>
+    </div>
+</div>

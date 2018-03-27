@@ -7,7 +7,7 @@
   </div>
 </div>
 <div class="panel-body">
-  <%= simple_form_for @category, url: admin_category_index_path, method: :post, html: {class: "form"} do |f| %>
+  <%= simple_form_for [:admin, @category], html: {class: "form"} do |f| %>
     <div class="modal-body">
       <div class="form-group row margin-center">
         <label for="example-text-input" class="col-2 col-form-label">Name</label>
