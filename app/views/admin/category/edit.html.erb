@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Create Category</h1>
+  </div>
+  <div id="flash-message">
+    <%= render "admin/shared/flash", flash: flash %>
+  </div>
+</div>
+<div class="panel-body">
+  <%= simple_form_for [:admin, @category], html: {class: "form"} do |f| %>
+    <div class="modal-body">
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Name</label>
+        <div class="col-10">
+          <%= f.input :name, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Description</label>
+        <div class="col-10">
+          <%= f.input :description, input_html: {class: "form-control", row: 5}, label: false %>
+        </div>
+      </div>
+      </br>
+    </div>
+    <%= f.submit 'Save', class: "btn btn-default btn-close" %>
+  <% end %>
+</div>

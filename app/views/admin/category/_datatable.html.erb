@@ -1,0 +1,23 @@
+<tr class="odd gradeX tr-<%= category.id %>">
+  <td>
+    <%= link_to admin_category_path(category) do %>
+      <%= category.name %>
+    <% end %>
+  </td>
+  <td>
+    <%= category&.description.truncate 250, omission: '...' %>
+  </td>
+  <td class="center"><%= category.created_at %></td>
+  <td class="center"><%= category.updated_at %></td>
+  <td class="">
+    <a href="<%= admin_category_path category %>" class="show_modal_post">
+      <i class="fa fa-eye fa-fw"></i>
+    </a>
+    <a href="<%= edit_admin_category_path category %>" class="edit_modal_post">
+      <i class="fa fa-edit fa-fw"></i>
+    </a>
+    <%= link_to admin_category_path(category), method: :delete, remote: true, data: { confirm: 'Bạn chắc chắn muốn xóa bài đăng này?' } do %>
+      <i class="fa fa-trash-o fa-fw"></i>
+    <% end %>
+  </td>
+</tr>
