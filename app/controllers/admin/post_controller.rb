@@ -1,12 +1,26 @@
 class Admin::PostController < Admin::BaseController
   before_action :load_post, only: [:show, :edit, :update, :destroy]
   before_action :load_posts, only: [:index, :destroy]
+  before_action :load_post_new, only: [:new, :create]
 
   def index
   end
 
   def show
     render :show
+  end
+
+  def new
+  end
+
+  def create
+    @post.assign_attributes post_params
+    if @post.save
+      flash[:notice] = "Thêm mới thành công"
+    else
+      flash[:error] = "Thêm mới không thành công"
+    end
+    redirect_to admin_post_index_path
   end
 
   def edit
@@ -32,6 +46,10 @@ class Admin::PostController < Admin::BaseController
     respond_to :js
   end
   private
+  def load_post_new
+    @post = Post.new
+  end
+
   def load_post
     @post = Post.find_by id: params[:id]
   end
