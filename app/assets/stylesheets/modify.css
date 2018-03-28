@@ -58,3 +58,18 @@
 .mg-bot-15 {
   margin-bottom: 15px;
 }
+
+.style-footer {
+  color: #ffd700;
+  font-size: 18px;
+}
+.style-footer-mini {
+  color: #ffd700;
+  font-size: 15px;
+}
+
+.style-footer-center {
+  color: #ffd700;
+  font-size: 15px;
+  text-align: center;
+}
