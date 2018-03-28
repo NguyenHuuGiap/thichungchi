@@ -7,7 +7,6 @@ location_center = Location.create! name: "Menu center", description: "Menu Right
 
 #create category
 gioithieu = Category.create! name: "Giới Thiệu", description: "gioi thieu"
-tintuc = Category.create! name: "Sổ Gia Phả", description: "Sổ Gia Phả"
 lichsu = Category.create! name: "Tin Tức - Sự Kiện", description: "Tin Tức Sự Kiện"
 thuvienanh = Category.create! name: "Tư Liệu", description: "Tư Liệu"
 lienhe = Category.create! name: "Quỹ Công Đức", description: "Quỹ Công Đức"
@@ -37,10 +36,9 @@ Category.create! name: "Sách Truyện Thơ Về Họ Nguyễn", description: "S
 
 #menu top
 LocationCategory.create! position: 0, location: location_top, category: gioithieu
-LocationCategory.create! position: 1, location: location_top, category: tintuc
-LocationCategory.create! position: 2, location: location_top, category: lichsu
-LocationCategory.create! position: 3, location: location_top, category: thuvienanh
-LocationCategory.create! position: 4, location: location_top, category: lienhe
+LocationCategory.create! position: 1, location: location_top, category: lichsu
+LocationCategory.create! position: 2, location: location_top, category: thuvienanh
+LocationCategory.create! position: 3, location: location_top, category: lienhe
 
 #menu left
 LocationCategory.create! position: 0, location: location_left, category: hd

@@ -28,6 +28,9 @@
                       <li class="dropdown">
                         <a href="<%= root_path %>">Trang Chủ</a>
                       </li>
+                      <li class="dropdown">
+                        <a href="<%= genealogy_index_path %>">Sơ Đồ Gia Phả</a>
+                      </li>
                       <% @category_parents.each do |cat_parent| %>
                         <% if cat_parent.children.present? %>
                           <li class="dropdown">
