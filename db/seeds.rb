@@ -13,15 +13,15 @@ thuvienanh = Category.create! name: "Tư Liệu", description: "Tư Liệu"
 lienhe = Category.create! name: "Quỹ Công Đức", description: "Quỹ Công Đức"
 Category.create! name: "Liên Hệ", description: "Liên Hệ"
 
-Category.create! name: "Gioi Thieu Chung", description: "gioi thieu chung", parent: gioithieu.id
-Category.create! name: "Lich su hinh thanh", description: "Lich su hinh thanh", parent: gioithieu.id
-Category.create! name: "Gia Tri Coi Nguon", description: "Gia tri coi nguon", parent: gioithieu.id
+Category.create! name: "Gioi Thieu Chung", description: "gioi thieu chung"
+Category.create! name: "Lich su hinh thanh", description: "Lich su hinh thanh"
+Category.create! name: "Gia Tri Coi Nguon", description: "Gia tri coi nguon"
 
-Category.create! name: "Tin Tuc Trong Nuoc", description: "Tin tuc trong nuoc", parent: tintuc.id
-Category.create! name: "Tin Tuc Quoc Te", description: "Tin tuc quoc te", parent: tintuc.id
+Category.create! name: "Tin Tuc Trong Nuoc", description: "Tin tuc trong nuoc"
+Category.create! name: "Tin Tuc Quoc Te", description: "Tin tuc quoc te"
 
-dn = Category.create! name: "Danh Nhan Lich Su", description: "Danh nhan lich su noi tieng", parent: lichsu.id
-ls = Category.create! name: "Lich Su Dong Ho", description: "Lich su dong ho", parent: lichsu.id
+dn = Category.create! name: "Danh Nhan Lich Su", description: "Danh nhan lich su noi tieng"
+ls = Category.create! name: "Lich Su Dong Ho", description: "Lich su dong ho"
 
 Category.create! name: "Gia Phả Các Chi Họ", description: "Gia phả các chi họ"
 Category.create! name: "Điều Lệ", description: "Điều lệ"
