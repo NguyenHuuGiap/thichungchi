@@ -27,3 +27,4 @@
 //= require dataTables.responsive
 //= require ajax_send_data
 //= require froala_editor.pkgd.min.js
+//= require cloudinary

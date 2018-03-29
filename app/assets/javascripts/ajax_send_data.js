@@ -1,10 +1,4 @@
 $(document).ready(function () {
-  // $(document).on('click', '.show_modal_post', function() {
-  //   showPost(this);
-  // });
-  // $(document).on('click', '.edit_modal_post', function() {
-  //   editPost(this);
-  // });
   uploadImage();
   setBackgroundImage();
   $(document).on('click', '.btn-close', function() {
