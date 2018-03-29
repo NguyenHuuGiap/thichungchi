@@ -9,10 +9,29 @@ $(document).ready(function(){
   });
 
   loadDataTable('#dataTables-allpage');
+
+  if($('.tree-term').hasClass('max-death')) {
+    $('.tree-term').nestable({
+      maxDepth: 2
+    });
+  } else {
+    $('.tree-term').nestable({
+      maxDepth: 1
+    });
+  }
+
+  $('.btn_save_nestable').click(function() {
+    saveNestable();
+  });
 });
 
 function loadDataTable(id_name) {
   $(id_name).DataTable({
     responsive: true
   });
+}
+
+function saveNestable() {
+  $('.list_term_nestable').val(window.JSON.stringify($('.tree-term').nestable('serialize')));
+  $('#form_term').submit();
 }
