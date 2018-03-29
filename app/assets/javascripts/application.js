@@ -13,6 +13,7 @@
 //= require jquery.min
 //= require jquery_ujs
 //= require jquery.fancybox.min
+//= require jquery.nestable
 //= require zoom-img
 //= require go.js
 //= require go-debug.js

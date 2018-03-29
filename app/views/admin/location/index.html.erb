@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Sắp Xếp Vị Trí Của Menu <%= @location.pattern.capitalize %></h1>
+  </div>
+  <div id="flash-message">
+    <%= render "admin/shared/flash", flash: flash %>
+  </div>
+</div>
+<div class="panel-body">
+  <div class="dd tree-term <%= @categories.category_not_parent.present? ? 'max-death' : nil %>">
+    <ol class="dd-list">
+      <% @categories.each do |category| %>
+        <% if category.children.present? %>
+          <li class="dd-item" data-id="<%= category.id %>">
+            <div class="dd-handle"><%= category.name %></div>
+            <ol class="dd-list">
+              <% category.children.each do |chil| %>
+                <li class="dd-item" data-id="<%= chil.id %>">
+                  <div class="dd-handle"><%= chil.name %></div>
+                </li>
+              <% end %>
+            </ol>
+          </li>
+        <% else %>
+          <li class="dd-item" data-id="<%= category.id %>">
+            <div class="dd-handle"><%= category.name %></div>
+          </li>
+        <% end %>
+      <% end %>
+    </ol>
+    <button type="button" class="btn btn-default btn_save_nestable">Save</button>
+  </div>
+  <%= form_for [:admin, @location], html: {id: "form_term"} do |f| %>
+    <%= hidden_field_tag :position, @location.pattern %>
+    <%= f.hidden_field :pattern, class: "list_term_nestable" %>
+  <% end %>
+</div>

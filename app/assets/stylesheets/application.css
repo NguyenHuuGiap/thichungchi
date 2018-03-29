@@ -12,6 +12,7 @@
  *
  *= require jquery.fancybox.min
  *= require bootstrap.min
+ *= require jquery.nestable
  *= require froala_style.min.css
  *= require froala_editor.pkgd.min.css
  *= require font-awesome
