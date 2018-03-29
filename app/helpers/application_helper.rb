@@ -7,4 +7,9 @@ module ApplicationHelper
     when :success then "alert-success"
     end
   end
+
+  def image_tag(source, options={})
+    source = "IMG_7151.JPG" if source.blank?
+    super(source, options)
+  end
 end
