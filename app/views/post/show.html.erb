@@ -18,7 +18,7 @@
           <p>
             <span style="font-size:14px">
               <strong>
-                <%= raw @post&.content.truncate(100, omission: '...') %>
+                <%= @post&.content.truncate(100, omission: '...') %>
               </strong>
             </span>
           </p>
