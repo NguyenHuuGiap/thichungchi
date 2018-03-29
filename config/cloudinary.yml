@@ -1,0 +1,18 @@
+development:
+  cloud_name: dtyef3vlu
+  api_key: '464322581664712'
+  api_secret: M9xx7tWtJIkV852IBU8mTs3J4JA
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dtyef3vlu
+  api_key: '464322581664712'
+  api_secret: M9xx7tWtJIkV852IBU8mTs3J4JA
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dtyef3vlu
+  api_key: '464322581664712'
+  api_secret: M9xx7tWtJIkV852IBU8mTs3J4JA
+  enhance_image_tag: true
+  static_image_support: false

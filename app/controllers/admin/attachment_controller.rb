@@ -16,7 +16,7 @@ class Admin::AttachmentController < Admin::BaseController
 
   def create
     @attachment = Attachment.create attachment_params
-    render json: {link: @attachment.attachment.url}
+    render json: {link: @attachment.reload.attachment.url}
   end
 
   private
