@@ -215,14 +215,14 @@ jQuery(document).ready(function() {
   function setupDiagram(total) {
     var nodeDataArray = [];
     nodeDataArray = [
-      {key: 0, color: "#85b793", name: "A", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11},
-      {key: 1, color: "#a0d8b6", name: "B", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 0},
-      {key: 2, color: "#fda9d0", name: "C", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 1},
-      {key: 3, color: "#9cd9f6", name: "D", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 1},
-      {key: 6, color: "#a0e59c", name: "E", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 2},
-      {key: 8, color: "#dacec2", name: "F", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 3},
-      {key: 7, color: "#92c3f3", name: "G", gender: "Female", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 2},
-      {key: 10, color: "#f1aaf2", name: "H", gender: "Female", role: "1", birthday: "04/05/1888", image: "http://localhost:3000/assets/IMG_7151-32dadcd10b445bd755f5f025fb6f13101b474a6ba5401936c7c7e6813cf09906.JPG", total: 11, parent: 3}
+      {key: 0, color: "#85b793", name: "A", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11},
+      {key: 1, color: "#a0d8b6", name: "B", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 0},
+      {key: 2, color: "#fda9d0", name: "C", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 1},
+      {key: 3, color: "#9cd9f6", name: "D", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 1},
+      {key: 6, color: "#a0e59c", name: "E", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 2},
+      {key: 8, color: "#dacec2", name: "F", gender: "Male", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 3},
+      {key: 7, color: "#92c3f3", name: "G", gender: "Female", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 2},
+      {key: 10, color: "#f1aaf2", name: "H", gender: "Female", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 3}
     ]
     myFullDiagram.model = new go.TreeModel(nodeDataArray);
   }
