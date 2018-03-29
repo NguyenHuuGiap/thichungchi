@@ -28,20 +28,34 @@
                       <li class="dropdown">
                         <a href="<%= root_path %>">Trang Chủ</a>
                       </li>
-                      <li class="dropdown">
-                        <a href="<%= genealogy_index_path %>">Sơ Đồ Gia Phả</a>
-                      </li>
-                      <% @category_parents.each do |cat_parent| %>
-                        <% if cat_parent.children.present? %>
+                      <% @category_parents.each_with_index do |cat_parent, index| %>
+                        <% if index == 0 %>
+                          <% if cat_parent.children.present? %>
+                            <li class="dropdown">
+                              <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                              <%= cat_parent.name %><span class="caret"></span></a>
+                              <%= render "home/category_child", cat_parent: cat_parent %>
+                            </li>
+                          <% else %>
+                            <li class="dropdown">
+                              <a href="<%= category_path cat_parent %>"><%= cat_parent.name %></a>
+                            </li>
+                          <% end %>
                           <li class="dropdown">
-                            <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <%= cat_parent.name %><span class="caret"></span></a>
-                            <%= render "home/category_child", cat_parent: cat_parent %>
+                            <a href="<%= genealogy_index_path %>">Sơ Đồ Gia Phả</a>
                           </li>
                         <% else %>
-                          <li class="dropdown">
-                            <a href="<%= category_path cat_parent %>"><%= cat_parent.name %></a>
-                          </li>
+                          <% if cat_parent.children.present? %>
+                            <li class="dropdown">
+                              <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                              <%= cat_parent.name %><span class="caret"></span></a>
+                              <%= render "home/category_child", cat_parent: cat_parent %>
+                            </li>
+                          <% else %>
+                            <li class="dropdown">
+                              <a href="<%= category_path cat_parent %>"><%= cat_parent.name %></a>
+                            </li>
+                          <% end %>
                         <% end %>
                       <% end %>
                     </ul>

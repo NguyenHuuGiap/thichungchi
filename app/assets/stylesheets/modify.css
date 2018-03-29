@@ -73,3 +73,12 @@
   font-size: 15px;
   text-align: center;
 }
+
+.height-400 {
+  height: 400px;
+}
+
+.word-wrap-100 {
+  max-width: 100%;
+  word-wrap: break-word;
+}

@@ -9,7 +9,7 @@
           <div class="list_new">
             <div class="col-md-4 no-left">
               <div class="img_left">
-                <%= link_to image_tag("IMG_7151.JPG", alt: "Image Description"), category_post_path(category, post) %>
+                <%= link_to image_tag(post&.logo&.url, alt: "Image Description"), category_post_path(category, post) %>
               </div>
             </div>
             <div class="col-md-8 no-left">
@@ -20,7 +20,7 @@
                   <% end %>
                 </h2>
                 <p>
-                  <%= post&.content&.truncate 150, omission: '...' %>
+                  <%= raw post&.content&.truncate 150, omission: '...' %>
                 </p>
               </div>
             </div>
