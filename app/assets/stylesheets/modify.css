@@ -86,3 +86,7 @@
 .no-padding u {
   text-decoration: none;
 }
+
+.show-video {
+  display: none;
+}

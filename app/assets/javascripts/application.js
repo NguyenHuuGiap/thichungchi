@@ -26,5 +26,6 @@
 //= require dataTables.bootstrap.min
 //= require dataTables.responsive
 //= require ajax_send_data
+//= require embed_video
 //= require froala_editor.pkgd.min.js
 //= require cloudinary

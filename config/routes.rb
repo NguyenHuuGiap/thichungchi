@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :category
     resources :admin
     resources :post
+    resources :upload_video
     resources :location, only: [:index, :update]
     resources :attachment, only: [:create, :destroy, :index]
   end

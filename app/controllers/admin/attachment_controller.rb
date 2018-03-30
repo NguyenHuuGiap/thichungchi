@@ -2,7 +2,7 @@ class Admin::AttachmentController < Admin::BaseController
   skip_before_action :verify_authenticity_token
 
   def index
-    attachments = Attachment.all
+    attachments = Attachment.where target_type: "POST"
     attachment_arr = attachments.map do |attachment|
       {
         url: attachment.attachment.url,

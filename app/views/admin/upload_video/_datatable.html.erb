@@ -1,0 +1,20 @@
+<tr class="odd gradeX tr-<%= video.id %>">
+  <td>
+    <%= index + 1 %>
+  </td>
+  <td>
+    <%= link_to admin_upload_video_path(video) do %>
+      <%= video.name %>
+    <% end %>
+  </td>
+  <td class="center"><%= video.created_at %></td>
+  <td class="center"><%= video.updated_at %></td>
+  <td class="center">
+    <a href="<%= edit_admin_admin_path admin %>" class="edit_modal_post">
+      <i class="fa fa-edit fa-fw"></i>
+    </a>
+    <%= link_to admin_upload_video_path(video), method: :delete, remote: true, data: { confirm: 'Bạn chắc chắn muốn xóa Admin này?' } do %>
+      <i class="fa fa-trash-o fa-fw"></i>
+    <% end %>
+  </td>
+</tr>
