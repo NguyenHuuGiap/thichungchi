@@ -1,0 +1,20 @@
+<tr class="odd gradeX tr-<%= admin.id %>">
+  <td>
+    <%= index + 1 %>
+  </td>
+  <td>
+    <%= link_to admin_admin_path(admin) do %>
+      <%= admin.email %>
+    <% end %>
+  </td>
+  <td class="center"><%= admin.created_at %></td>
+  <td class="center"><%= admin.updated_at %></td>
+  <td class="center">
+    <a href="<%= edit_admin_admin_path admin %>" class="edit_modal_post">
+      <i class="fa fa-edit fa-fw"></i>
+    </a>
+    <%= link_to admin_admin_path(admin), method: :delete, remote: true, data: { confirm: 'Bạn chắc chắn muốn xóa Admin này?' } do %>
+      <i class="fa fa-trash-o fa-fw"></i>
+    <% end %>
+  </td>
+</tr>
