@@ -14,6 +14,13 @@
         </div>
         </br>
         <div class="form-group row margin-center">
+          <label for="example-text-input" class="col-2 col-form-label">Summary (Tóm Tắt)</label>
+          <div class="col-10">
+            <%= f.input :summary, input_html: {class: "form-control", maxlength: 255}, label: false %>
+          </div>
+        </div>
+        </br>
+        <div class="form-group row margin-center">
           <label for="example-text-input" class="col-2 col-form-label">Category</label>
           <div class="col-10">
             <%= f.input :category_id, label: false, wrapper: false, include_blank: false, as: :select,

@@ -51,11 +51,11 @@ LocationCategory.create! position: 1, location: location_center, category: dn
 LocationCategory.create! position: 2, location: location_center, category: ls
 
 
-Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", category: hd
+Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", summary: Faker::Demographic.race, category: hd
 Category.all.each do |category|
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.ordered_list, category: category
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.unordered_list, category: category
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.inline_code, category: category
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.ordered_list, summary: Faker::Demographic.race, category: category
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.unordered_list, summary: Faker::Demographic.race, category: category
+  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.inline_code, summary: Faker::Demographic.race, category: category
 end
 
 Admin.create! email: "admin@gmail.com", password: 123123
