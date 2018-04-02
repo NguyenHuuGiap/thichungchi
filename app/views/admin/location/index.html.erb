@@ -7,7 +7,7 @@
   </div>
 </div>
 <div class="panel-body">
-  <div class="dd tree-term <%= @categories.category_not_parent.present? ? 'max-death' : nil %>">
+  <div class="dd tree-term <%= @location.top? ? 'max-death' : nil %>">
     <ol class="dd-list">
       <% @categories.each do |category| %>
         <% if category.children.present? %>

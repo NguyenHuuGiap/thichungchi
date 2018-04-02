@@ -7,7 +7,6 @@ class Admin::UploadVideoController < Admin::BaseController
   end
 
   def new
-    debugger
   end
 
   def create
@@ -24,9 +23,22 @@ class Admin::UploadVideoController < Admin::BaseController
   end
 
   def update
+    @video.assign_attributes video_params
+    if @video.save
+      flash[:success] = "Cập nhật thành công"
+    else
+      flash[:error] = "Cập nhật thất bại"
+    end
+    redirect_to admin_upload_video_index_path
   end
 
   def destroy
+    if @video.destroy
+      flash[:success] = "Xóa thành công"
+    else
+      flash[:error] = "Xóa không thành công"
+    end
+    respond_to :js
   end
 
   private
@@ -39,7 +51,6 @@ class Admin::UploadVideoController < Admin::BaseController
   end
 
   def video_params
-    debugger
     params.require(:attachment).permit(:name, :description, :target_type)
   end
 end
