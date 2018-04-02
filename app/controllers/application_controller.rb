@@ -6,13 +6,10 @@ class ApplicationController < ActionController::Base
   def load_categories
     @category_parents = Location.top&.first&.categories&.category_parent.includes :children
     @category_lefts = Location.left&.first&.categories.includes :posts
+    @attachments = Attachment.where target_type: "Video"
   end
 
   def load_posts
-    @post_news = Post.order(created_at: :desc).limit 10
-  end
-
-  def load_attachments
     @post_news = Post.order(created_at: :desc).limit 10
   end
 

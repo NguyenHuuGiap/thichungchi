@@ -57,12 +57,12 @@ function editPost(id_href) {
 }
 
 function uploadImage() {
-  var idPost = ""
   $('#comment').froalaEditor({
     videoUpload: false,
     imageUploadMethod: 'POST',
     imageUploadURL: '/admin/attachment',
     imageUploadParam: 'attachment',
+    imageUploadParams: {target_type: 'POST'},
     imageMaxSize: 5 * 1024 * 1024,
     imageAllowedTypes: ['jpeg', 'jpg', 'png'],
     imageManagerLoadURL: '/admin/attachment',

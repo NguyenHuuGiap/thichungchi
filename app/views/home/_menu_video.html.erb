@@ -1,0 +1,36 @@
+<div class="box-heading">
+  <span>Video</span>
+</div>
+<div class="box-content">
+  <ul class="list-unstyled">
+    <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+      <div class="video-url">
+        <% @attachments.each do |video| %>
+          <li>
+            <img name="<%= video.name %>" url="<%= video.description %>" code="" src="">
+          </li>
+        <% end %>
+      </div>
+    </marquee>
+  </ul>
+</div>
+<div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title" id="gridModalLabel"></p>
+      </div>
+      <div class="modal-body" style="padding: 0">
+        <div class="container-fluid bd-example-row">
+          <div class="row">
+            <div id="view_yt" class="col-md-12"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="close_yt" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>

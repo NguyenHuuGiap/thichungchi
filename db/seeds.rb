@@ -57,3 +57,5 @@ Category.all.each do |category|
   Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.unordered_list, category: category
   Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.inline_code, category: category
 end
+
+Admin.create! email: "admin@gmail.com", password: 123123
