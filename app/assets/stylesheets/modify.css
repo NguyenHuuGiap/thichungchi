@@ -101,14 +101,14 @@
 }
 
 .left {
-  height: 42%;
+  height: 50%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
 .right {
-  height: 42%;
+  height: 50%;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -116,8 +116,10 @@
 
 .left img {
   height: 100%;
+  width: 120px;
 }
 
 .right img {
   height: 100%;
+  width: 120px;
 }
