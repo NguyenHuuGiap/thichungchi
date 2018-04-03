@@ -10,24 +10,34 @@
 
   <body>
     <body>
-      <div class="container" id="header">
-        <%= render "home/menu" %>
-      </div>
-      <div class="container " id="content">
-        <div class="row">
-           <div class="col-md-3 no-left">
-             <div class="new_left box">
-               <%= render "home/menu_thu_vien_anh" %>
-             </div>
-             <div class="video_left box">
-               <%= render "home/menu_video" %>
-             </div>
-             <div class="new_left box">
-               <%= render "home/menu_noti_action" %>
-             </div>
-           </div>
-           <%= yield %>
-         </div>
+      <div class="flex-container">
+        <div class="left">
+          <%= image_tag "banner1.jpg", alt: "" %>
+        </div>
+        <div>
+          <div class="container" id="header">
+            <%= render "home/menu" %>
+          </div>
+          <div class="container " id="content">
+            <div class="row">
+              <div class="col-md-3 no-left">
+                <div class="new_left box">
+                  <%= render "home/menu_thu_vien_anh" %>
+                </div>
+                <div class="video_left box">
+                  <%= render "home/menu_video" %>
+                </div>
+                <div class="new_left box">
+                  <%= render "home/menu_noti_action" %>
+                </div>
+              </div>
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <%= image_tag "banner2.jpg", alt: "" %>
+        </div>
       </div>
       <div class="container" id="footer">
         <%= render "layouts/footer" %>

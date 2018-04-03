@@ -90,3 +90,36 @@
 .show-video {
   display: none;
 }
+
+.carousel-inner {
+  max-height: 43%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.right {
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.left img {
+  height: 100%;
+  width: 120px;
+}
+
+.right img {
+  height: 100%;
+  width: 120px;
+}

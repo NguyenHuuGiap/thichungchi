@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,66 +14,76 @@
     <%= yield :specific_page_js_on_head %>
   </head>
   <body>
-    <div class="container" id="header">
-      <%= render "home/menu" %>
-    </div>
-    <div class="container " id="content">
-      <div class="box-center">
-        <div class="box-header"></div>
-        <div class="box-body">
-          <div id="carousel-example-center" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <a class="fancybox-buttons" data-fancybox-group="button"
-                  href="<%= image_url 'gia_pha1.jpg' %>">
-                  <%= image_tag "gia_pha2.jpg", alt: "" %>
-                </a>
-              </div>
-              <div class="item">
-                <a class="fancybox-buttons" data-fancybox-group="button"
-                  href="<%= image_url "gia_pha3.jpg" %>">
-                  <%= image_tag "gia_pha3.jpg", alt: "" %>
-                </a>
-              </div>
-              <div class="item">
-                <a class="fancybox-buttons" data-fancybox-group="button"
-                  href="<%= image_url "gia_pha4.jpg" %>">
-                  <%= image_tag "gia_pha4.jpg", alt: "" %>
-                </a>
-              </div>
-              <div class="item">
-                <a class="fancybox-buttons" data-fancybox-group="button"
-                  href="<%= image_url "gia_pha5.png" %>">
-                  <%= image_tag "gia_pha5.png", alt: "" %>
-                </a>
-              </div>
-              <div class="item">
-                <a class="fancybox-buttons" data-fancybox-group="button"
-                  href="<%= image_url "gia_pha6.jpg" %>">
-                  <%= image_tag "gia_pha6.jpg", alt: "" %>
-                </a>
+    <div class="flex-container">
+      <div class="left">
+        <%= image_tag "banner1.jpg", alt: "" %>
+      </div>
+      <div>
+        <div class="container" id="header">
+          <%= render "home/menu" %>
+        </div>
+        <div class="container" id="content">
+          <div class="box-center">
+            <div class="box-header"></div>
+            <div class="box-body">
+              <div id="carousel-example-center" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <a class="fancybox-buttons" data-fancybox-group="button"
+                      href="<%= image_url 'gia_pha2.jpg' %>">
+                      <%= image_tag "gia_pha2.jpg", alt: "" %>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="fancybox-buttons" data-fancybox-group="button"
+                      href="<%= image_url "gia_pha3.jpg" %>">
+                      <%= image_tag "gia_pha3.jpg", alt: "" %>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="fancybox-buttons" data-fancybox-group="button"
+                      href="<%= image_url "gia_pha4.jpg" %>">
+                      <%= image_tag "gia_pha4.jpg", alt: "" %>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="fancybox-buttons" data-fancybox-group="button"
+                      href="<%= image_url "gia_pha5.png" %>">
+                      <%= image_tag "gia_pha5.png", alt: "" %>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a class="fancybox-buttons" data-fancybox-group="button"
+                      href="<%= image_url "gia_pha6.jpg" %>">
+                      <%= image_tag "gia_pha6.jpg", alt: "" %>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+           <div class="row">
+              <div class="col-md-3 no-left">
+                <div class="new_left box">
+                  <%= render "home/menu_thu_vien_anh" %>
+                </div>
+                <div class="video_left box">
+                  <%= render "home/menu_video" %>
+                </div>
+                <div class="new_left box">
+                  <%= render "home/menu_noti_action" %>
+                </div>
+              </div>
+              <%= yield %>
+            </div>
+        </div>
+        <div class="container" id="footer">
+          <%= render "layouts/footer" %>
         </div>
       </div>
-       <div class="row">
-          <div class="col-md-3 no-left">
-            <div class="new_left box">
-              <%= render "home/menu_thu_vien_anh" %>
-            </div>
-            <div class="video_left box">
-              <%= render "home/menu_video" %>
-            </div>
-            <div class="new_left box">
-              <%= render "home/menu_noti_action" %>
-            </div>
-          </div>
-          <%= yield %>
-        </div>
-    </div>
-    <div class="container" id="footer">
-      <%= render "layouts/footer" %>
+      <div class="right">
+        <%= image_tag "banner2.jpg", alt: "" %>
+      </div>
     </div>
     <%= javascript_include_tag "application" %>
   </body>
