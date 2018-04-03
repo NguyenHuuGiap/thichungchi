@@ -27,7 +27,7 @@
       <div class="form-group row margin-center">
         <label for="example-text-input" class="col-2 col-form-label">Pattern</label>
         <div class="col-10">
-          <%= f.collection_radio_buttons :pattern, [[:top, "Top"], [:left, "Left"]], :first, :last %>
+          <%= f.collection_radio_buttons :pattern, [[:top, "Top"], [:left, "Left"]], :first, :last, {checked: :top} %>
         </div>
       </div>
       </br>
