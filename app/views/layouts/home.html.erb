@@ -28,36 +28,14 @@
             <div class="box-body">
               <div id="carousel-example-center" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active">
-                    <a class="fancybox-buttons" data-fancybox-group="button"
-                      href="<%= image_url 'gia_pha2.jpg' %>">
-                      <%= image_tag "gia_pha2.jpg", alt: "" %>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a class="fancybox-buttons" data-fancybox-group="button"
-                      href="<%= image_url "gia_pha3.jpg" %>">
-                      <%= image_tag "gia_pha3.jpg", alt: "" %>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a class="fancybox-buttons" data-fancybox-group="button"
-                      href="<%= image_url "gia_pha4.jpg" %>">
-                      <%= image_tag "gia_pha4.jpg", alt: "" %>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a class="fancybox-buttons" data-fancybox-group="button"
-                      href="<%= image_url "gia_pha5.png" %>">
-                      <%= image_tag "gia_pha5.png", alt: "" %>
-                    </a>
-                  </div>
-                  <div class="item">
-                    <a class="fancybox-buttons" data-fancybox-group="button"
-                      href="<%= image_url "gia_pha6.jpg" %>">
-                      <%= image_tag "gia_pha6.jpg", alt: "" %>
-                    </a>
-                  </div>
+                  <% @image_tops.each do |image| %>
+                    <div class="item">
+                      <a class="fancybox-buttons" data-fancybox-group="button"
+                        href="<%= image_url image.attachment %>">
+                        <%= image_tag image.attachment.url, alt: "" %>
+                      </a>
+                    </div>
+                  <% end %>
                 </div>
               </div>
             </div>
