@@ -3,11 +3,11 @@
 </div>
 <div class="box-content block_gallery">
   <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
-    <%= image_tag "gia_pha1.jpg", alt: "" %>
-    <%= image_tag "gia_pha2.jpg", alt: "" %>
-    <%= image_tag "gia_pha3.jpg", alt: "" %>
-    <%= image_tag "gia_pha4.jpg", alt: "" %>
-    <%= image_tag "gia_pha5.png", alt: "" %>
-    <%= image_tag "gia_pha6.jpg", alt: "" %>
+    <% @image_tops.each do |image| %>
+      <a class="fancybox-buttons" data-fancybox-group="button"
+        href="<%= image_url image.attachment %>">
+        <%= image_tag image.attachment.url, alt: "" %>
+      </a>
+    <% end %>
   </marquee>
 </div>
