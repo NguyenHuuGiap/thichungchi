@@ -24,10 +24,8 @@
 //= require sb-admin-2.js
 //= require jquery.dataTables.min
 //= require dataTables.bootstrap.min
-//= require slick.min
 //= require dataTables.responsive
 //= require ajax_send_data
 //= require embed_video
-//= require zoom
 //= require froala_editor.pkgd.min.js
 //= require cloudinary
