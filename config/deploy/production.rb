@@ -9,6 +9,14 @@
 
 
 
+set :user, "deploy"
+set :port, "222"
+set :deploy_via, :remote_cache
+set :conditionally_migrate, true
+set :rails_env, "production"
+
+# Phần IP thì bạn thay thế cho phù hợp với IP của Docker container nhé
+server "45.124.85.120", user: fetch(:user), port: fetch(:port), roles: %w(web app db)
 # role-based syntax
 # ==================
 
