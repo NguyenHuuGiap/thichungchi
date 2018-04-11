@@ -1,0 +1,577 @@
+@media (min-width: 1200px) {
+  /* line 2, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .container {
+    width: 1030px;
+  }
+
+  /* line 5, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .no-left {
+    padding-left: 0px;
+  }
+
+  /* line 8, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .no-right {
+    padding-right: 0px;
+  }
+
+  /* line 11, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 17, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .list_new {
+    background: #FFF;
+    max-height: none !important;
+    display: table;
+    width: 100%;
+    border-bottom: 1px dotted #eee;
+  }
+
+  /* line 24, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .list_new .img_left {
+    width: 100%;
+    max-height: none !important;
+    overflow: hidden;
+    padding: 8px;
+  }
+
+  /* line 30, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .list_new .img_left img {
+    width: 100%;
+  }
+
+  /* line 33, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .list_new .content_new {
+    color: #333;
+  }
+
+  /* line 36, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .list_new .content_new h2 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  /* line 40, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .list_new .content_new a {
+    color: brown;
+    text-decoration: none;
+  }
+
+  /* line 44, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .statistics {
+    display: none !important;
+  }
+
+  /* line 47, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .new_left.box.statistics {
+    display: none;
+  }
+}
+/* line 51, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+body {
+  background: url(/assets/Ba_Vi-f5641385ae0d0c076c34e4b5e82c20bdf8bd9ae6a06b10df9395dbef215d88be.jpg) top center fixed;
+  background-size: cover;
+  font-size: 12px;
+  color: #620600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 58, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .top-header {
+  background: url(/assets/body_bg-aaaace8d4301ff14191ae6bc9c633aeddb136baa2c53573bb3de2a284a0b032c.png) top left repeat;
+  display: table;
+  width: 100%;
+  padding: 2px;
+  color: #f4e318;
+}
+
+/* line 65, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .top-header h1 {
+  font-size: 14px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+/* line 71, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .top-header h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+/* line 77, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .top-header .wp-top-header {
+  width: 100%;
+  display: table;
+  border: 4px double #f4e318;
+}
+
+/* line 82, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .mid-header img {
+  width: 100%;
+}
+
+/* line 85, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .bot-header {
+  background: url(/assets/body_bg-aaaace8d4301ff14191ae6bc9c633aeddb136baa2c53573bb3de2a284a0b032c.png) top left repeat;
+}
+
+/* line 88, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .bot-header .navbar_header .navbar-default {
+  background-color: transparent !important;
+  border: none;
+}
+
+/* line 92, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#header .bot-header .navbar_header .navbar-toggle {
+  border-radius: 0px !important;
+}
+
+/* line 95, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default {
+  background-color: none !important;
+  margin-bottom: 0px;
+}
+
+/* line 99, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-heade .navbar-toggle {
+  border-radius: 0px !important;
+}
+
+/* line 102, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-collapse ul li a {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* line 107, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-collapse ul li a:hover {
+  color: yellow;
+  background: none;
+}
+
+/* line 111, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-collapse ul li ul.dropdown-menu {
+  background: url(/assets/body_bg-aaaace8d4301ff14191ae6bc9c633aeddb136baa2c53573bb3de2a284a0b032c.png) top left repeat !important;
+}
+
+/* line 114, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-collapse ul li ul.dropdown-menu li {
+  padding: 3px 5px;
+}
+
+/* line 117, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-collapse ul li ul.dropdown-menu li a {
+  border-top: 1px dotted #CCC;
+}
+
+/* line 120, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-collapse ul .active a {
+  color: yellow;
+  background: none;
+}
+
+/* line 124, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-collapse ul .active a:hover {
+  color: yellow;
+  background: none;
+}
+
+/* line 128, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  background: none;
+  color: #ff0;
+}
+
+/* line 132, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.dropdown-menu > li > a {
+  padding: 3px 10px;
+}
+
+@media (min-width: 1200px) {
+  /* line 136, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .bot-header .navbar_header {
+    min-height: 55px;
+    padding-top: 10px;
+    background: url(/assets/menu-277203554142267cc24463f6cb7e81d1361ece7539d559dd28b829b9545ba1e1.png) center center no-repeat;
+  }
+
+  /* line 141, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .bot-header .navbar_header .navbar-default {
+    background-color: none !important;
+  }
+
+  /* line 144, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .bot-header .navbar_header .navbar-default .navbar-collapse ul.navbar-nav {
+    display: table;
+    margin: auto;
+    float: none !important;
+  }
+}
+@media (min-width: 768px) {
+  /* line 151, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0px;
+    visibility: hidden;
+    margin-top: -1px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  /* line 160, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+    top: 0px;
+  }
+
+  /* line 164, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* line 170, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-top: 40px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  /* line 177, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+  }
+
+  /* line 185, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+  .navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+  }
+}
+/* line 195, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#content {
+  background: url(/assets/bg1-c9e6cd9f97a0c4d9c6f9c53611fb6614c0cefb258ad395b3d5759277142e98f1.png) center center fixed;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* line 200, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box {
+  background: #FFF;
+}
+
+/* line 203, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box .box-heading {
+  background: #c53915;
+  padding: 5px;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid yellow;
+}
+
+/* line 212, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box .box-content .video {
+  padding: 5px;
+}
+
+/* line 215, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-content {
+  padding-bottom: 10px;
+}
+
+/* line 218, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-content ul {
+  margin-bottom: 0px;
+}
+
+/* line 221, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-content ul li {
+  padding: 0px 10px;
+}
+
+/* line 224, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-content ul li a {
+  padding: 6px 0px 6px 20px;
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 230, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-content ul li a:hover {
+  color: brown;
+}
+
+/* line 233, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-content ul li + li a {
+  border-top: 1px dotted #ccc;
+}
+
+/* line 236, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.menu_left ul li a {
+  background: url(/assets/list-363d0753518c04d2908d3b4af6dfa912d1e7fe058ff3fd9cae4349c18d88e7b1.png) no-repeat;
+  background-position: 0px 10px;
+}
+
+/* line 240, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_left ul li a {
+  background: url(/assets/list-363d0753518c04d2908d3b4af6dfa912d1e7fe058ff3fd9cae4349c18d88e7b1.png) no-repeat;
+  background-position: 0px 10px;
+}
+
+/* line 244, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.video_left ul li a {
+  background: url(/assets/video2-34a9f7c032fc87ebd496d8d06a47bca828d1fb54b93f3a39ae42b612f4727bfb.gif) no-repeat;
+  background-position: 0px 10px;
+}
+
+/* line 248, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-content #carousel-example-generic .item {
+  overflow: hidden;
+  height: 150px;
+}
+
+/* line 252, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#carousel-example-center {
+  margin-bottom: 15px;
+}
+
+/* line 255, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#carousel-example-center .item img {
+  height: 400px;
+  width: 100%;
+}
+
+/* line 259, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center {
+  margin-bottom: 15px;
+}
+
+/* line 262, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-header {
+  background: #ff920a;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ff920a), color-stop(100%, #ffaf4b));
+  background: -webkit-linear-gradient(top, #ff920a 0%, #ffaf4b 100%);
+  background: linear-gradient(to bottom, #ff920a 0%, #ffaf4b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff920a', endColorstr='#ffaf4b', GradientType=0 );
+  text-align: left;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  line-height: 20px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top: 1px solid yellow;
+}
+
+/* line 278, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-body {
+  background: #FFF;
+  display: table;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* line 284, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-body .list_new {
+  background: #FFF;
+  max-height: 160px;
+  display: table;
+  width: 100%;
+  border-bottom: 1px dotted #eee;
+}
+
+/* line 291, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-body .list_new .img_left {
+  width: 100%;
+  max-height: 160px;
+  overflow: hidden;
+  padding: 8px;
+}
+
+/* line 297, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-body .list_new .img_left img {
+  width: 100%;
+}
+
+/* line 300, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-body .list_new .content_new {
+  color: #333;
+}
+
+/* line 303, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-body .list_new .content_new h2 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* line 307, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.new_center .box-body .list_new .content_new a {
+  color: brown;
+  text-decoration: none;
+}
+
+/* line 311, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.thumbail {
+  margin-bottom: 10px;
+  padding-left: 0;
+  padding-right: 05px;
+}
+
+/* line 316, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.each_post {
+  padding: 0;
+  margin-bottom: 20px;
+  border-bottom: dashed 1px #ccc;
+}
+
+/* line 321, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.text {
+  padding: 0;
+}
+
+/* line 324, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.text p {
+  font-size: 12px;
+}
+
+/* line 327, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.text p a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* line 331, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-header a {
+  color: #fff;
+}
+
+/* line 334, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-body.text_in_content p {
+  padding: 0 10px;
+}
+
+/* line 337, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.box-body.text_in_content img {
+  max-width: 90% !important;
+  padding: 0 !important;
+  display: block;
+  margin: auto;
+  height: auto;
+}
+
+/* line 344, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+ul.list_bottom {
+  margin-bottom: 0px;
+}
+
+/* line 347, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+ul.list_bottom li {
+  padding: 0px 10px;
+}
+
+/* line 350, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+ul.list_bottom li a {
+  padding: 6px 0px 6px 20px;
+  color: #333;
+  display: block;
+  text-decoration: none;
+  background: url(/assets/list-363d0753518c04d2908d3b4af6dfa912d1e7fe058ff3fd9cae4349c18d88e7b1.png) no-repeat;
+  background-position: 0px 10px;
+}
+
+/* line 358, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+ul.list_bottom li a:hover {
+  color: brown;
+}
+
+/* line 361, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+ul.list_bottom li + li a {
+  border-top: 1px dotted #ccc;
+}
+
+/* line 364, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.merit marquee {
+  height: 400px;
+}
+
+/* line 367, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.merit marquee img {
+  width: 100%;
+}
+
+/* line 370, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.video_left marquee {
+  height: 400px;
+}
+
+/* line 373, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.video_left.box img {
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* line 378, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.block_gallery marquee {
+  height: 300px;
+}
+
+/* line 381, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.merit li a, .video_left li a {
+  cursor: pointer;
+}
+
+/* line 384, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.block_gallery img {
+  width: 100% !important;
+}
+
+/* line 387, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+.nopadding, .nopadding img {
+  padding: 0 !important;
+}
+
+/* line 390, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#footer {
+  color: #333;
+  background: #FFF;
+  min-height: 80px;
+  margin-top: 20px;
+  background: url(/assets/body_bg-aaaace8d4301ff14191ae6bc9c633aeddb136baa2c53573bb3de2a284a0b032c.png) repeat left top transparent;
+}
+
+/* line 397, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#footer ul {
+  margin-top: 10px;
+}
+
+/* line 400, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/styles.scss */
+#footer ul i {
+  margin-right: 10px;
+}
