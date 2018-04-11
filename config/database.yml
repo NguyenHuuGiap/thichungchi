@@ -23,5 +23,4 @@ production:
 staging:
   <<: *default
   database: GP_staging
-  username: GP
   password: judoda09
