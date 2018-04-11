@@ -4,7 +4,8 @@ default: &default
   pool: 5
   username: root
   password: judoda09
-  socket: /var/run/mysqld/mysqld.sock
+  # socket: localhost
+  host: 127.0.0.1
 
 development:
   <<: *default
@@ -23,4 +24,3 @@ production:
 staging:
   <<: *default
   database: GP_staging
-  password: judoda09
