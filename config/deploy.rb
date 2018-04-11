@@ -17,6 +17,11 @@ set :linked_files, fetch(:linked_files, [])
 set :linked_dirs, fetch(:linked_dirs, [])
   .push("log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor/bundle")
 
+set :default_env, File.read("/home/deploy/.env").split("\n").inject({}){|h,var|
+  k_v = var.gsub("export ","").split("=")
+  h.merge k_v.first.downcase => k_v.last.gsub("\"", "")
+}.symbolize_keys
+
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
