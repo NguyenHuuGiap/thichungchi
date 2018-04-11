@@ -3,7 +3,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: <%= ENV['GP_DATABASE_PASSWORD'] %>
+  password: judoda09
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -22,6 +22,6 @@ production:
 
 staging:
   <<: *default
-  database: GP_production
+  database: GP_staging
   username: GP
-  password: <%= ENV['GP_DATABASE_PASSWORD'] %>
+  password: judoda09
