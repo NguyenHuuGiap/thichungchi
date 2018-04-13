@@ -6,7 +6,6 @@ location_left = Location.create! name: "Menu Left", description: "Menu Left", pa
 location_center = Location.create! name: "Menu center", description: "Menu Right", pattern: 2
 
 #create category
-gioithieu = Category.create! name: "Giới Thiệu", description: "gioi thieu"
 lichsu = Category.create! name: "Tin Tức - Sự Kiện", description: "Tin Tức Sự Kiện"
 thuvienanh = Category.create! name: "Tư Liệu", description: "Tư Liệu"
 lienhe = Category.create! name: "Quỹ Công Đức", description: "Quỹ Công Đức"
@@ -35,7 +34,6 @@ Category.create! name: "Sách Truyện Thơ Về Họ Nguyễn", description: "S
 #create location category
 
 #menu top
-LocationCategory.create! position: 0, location: location_top, category: gioithieu
 LocationCategory.create! position: 1, location: location_top, category: lichsu
 LocationCategory.create! position: 2, location: location_top, category: thuvienanh
 LocationCategory.create! position: 3, location: location_top, category: lienhe
@@ -50,12 +48,7 @@ LocationCategory.create! position: 0, location: location_center, category: hd
 LocationCategory.create! position: 1, location: location_center, category: dn
 LocationCategory.create! position: 2, location: location_center, category: ls
 
-
-Post.create! title: "Thông tin gia pha", content: "Sách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ NguyễnSách Truyện Thơ Về Họ Nguyễn", summary: Faker::Demographic.race, category: hd
-Category.all.each do |category|
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.ordered_list, summary: Faker::Demographic.race, category: category
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.unordered_list, summary: Faker::Demographic.race, category: category
-  Post.create! title: Faker::Name.unique.name, content: Faker::Markdown.inline_code, summary: Faker::Demographic.race, category: category
-end
+#create post gioi thieu
+Post.create! title: "Giới thiệu", content: Faker::Markdown.ordered_list, summary: Faker::Demographic.race, pattern: "GioiThieu"
 
 Admin.create! email: "admin@gmail.com", password: 123123

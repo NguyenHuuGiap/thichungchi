@@ -23,13 +23,17 @@
         </div>
       </div>
       </br>
-      <div class="form-group row margin-center">
-        <label for="example-text-input" class="col-2 col-form-label">Category</label>
-        <div class="col-10">
-          <%= f.input :category_id, label: false, wrapper: false, include_blank: false, as: :select,
-            collection: Category.all.pluck(:name, :id), input_html: {class: "form-control"} %>
+      <% if @post.pattern.blank? %>
+        <div class="form-group row margin-center">
+          <label for="example-text-input" class="col-2 col-form-label">Category</label>
+          <div class="col-10">
+            <%= f.input :category_id, label: false, wrapper: false, include_blank: false, as: :select,
+              collection: Category.all.pluck(:name, :id), input_html: {class: "form-control"} %>
+          </div>
         </div>
-      </div>
+      <% else %>
+        <%= f.input :pattern, as: :hidden, input_html: {value: "GioiThieu"} %>
+      <% end %>
       </br>
       <div class="form-group row margin-center">
         <label for="example-text-input" class="col-2 col-form-label">Content</label>

@@ -1,0 +1,19 @@
+<tr class="odd gradeX tr-<%= post.id %>">
+  <td>
+    <%= link_to admin_post_path(post) do %>
+      <%= post.title %>
+    <% end %>
+  </td>
+  <td>
+    <%= post&.content.truncate 250, omission: '...' %>
+  </td>
+  <td><%= image_tag(post&.logo&.url, size: "80") if post.logo.present? %></td>
+  <td class="center"><%= post.created_at %></td>
+  <td class="center"><%= post.updated_at %></td>
+  <td class="center"><%= post&.category&.name %></td>
+  <td class="">
+    <a href="<%= edit_admin_post_path post %>" data-id="<%= post.id %>" class="edit_modal_post">
+      <i class="fa fa-edit fa-fw"></i>
+    </a>
+  </td>
+</tr>
