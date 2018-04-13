@@ -1,0 +1,35 @@
+<div class="col-md-9 no-padding">
+  <div class="new_center box-center">
+    <div class="box-header">
+       <span>Gioi Thieu</span>
+    </div>
+    <div class="box-body text_in_content word-wrap-100">
+      <p></p>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <img alt="Image Description" src="<%= @gioithieu&.logo %>">
+        </div>
+        <div class="col-md-8">
+          <span style="color: #1f1f1f"><%= @gioithieu&.title %></span><br><br>
+          <span style="color: #1f1f1f" class="glyphicon glyphicon-time" aria-hidden="true"></span>
+          <span style="color: #1f1f1f">Ngày đăng: <%= @gioithieu.created_at %></span>
+          <br>
+          <u><i style="color: #1f1f1f">Tóm tắt:</i></u>
+          <p>
+            <span style="font-size:14px">
+              <strong>
+                <%= @gioithieu&.summary.truncate(254, omission: '...') %>
+              </strong>
+            </span>
+          </p>
+        </div>
+      </div>
+      <p></p>
+      <p style="color: #1f1f1f"><u><i>Nội dung:</i></u></p>
+      <p></p>
+      <p>
+        <%= raw @gioithieu&.content %>
+      </p>
+     </div>
+  </div>
+</div>

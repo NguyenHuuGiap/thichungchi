@@ -20,7 +20,7 @@ class Admin::PostController < Admin::BaseController
     else
       flash[:error] = "Thêm mới không thành công"
     end
-    redirect_to admin_post_index_path
+    @post.pattern.present? ? redirect_to(admin_gioi_thieu_index_path) : redirect_to(admin_post_index_path)
   end
 
   def edit
@@ -34,7 +34,7 @@ class Admin::PostController < Admin::BaseController
     else
       flash[:error] = "Cập nhật không thành công"
     end
-    redirect_to admin_post_index_path
+    @post.pattern.present? ? redirect_to(admin_gioi_thieu_index_path) : redirect_to(admin_post_index_path)
   end
 
   def destroy
@@ -47,7 +47,7 @@ class Admin::PostController < Admin::BaseController
   end
   private
   def load_post_new
-    @post = Post.new
+    @post = params[:pattern].present? ? Post.new(pattern: params[:pattern]) : Post.new
   end
 
   def load_post
@@ -55,7 +55,7 @@ class Admin::PostController < Admin::BaseController
   end
 
   def load_posts
-    @posts = Post.all.includes :category
+    @posts = Post.except_gioithieu.includes :category
   end
 
   def post_params

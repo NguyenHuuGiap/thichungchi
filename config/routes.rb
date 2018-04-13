@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :category do
     resources :post
   end
+  resources :gioi_thieu, only: :index
   resources :genealogy
   namespace :admin do
     root "category#index"
@@ -14,5 +15,6 @@ Rails.application.routes.draw do
     resources :upload_image
     resources :location, only: [:index, :update]
     resources :attachment, only: [:create, :destroy, :index]
+    resources :gioi_thieu, only: [:index]
   end
 end
