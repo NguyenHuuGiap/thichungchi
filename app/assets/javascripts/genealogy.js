@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
           },
           maxSelectionCount: 1,
           "toolManager.hoverDelay": 100,
-          "ChangedSelection": showLocalOnLocalClick
+          "ObjectSingleClicked": showLocalOnLocalClick
         });
 
     function textStyle() {
@@ -107,37 +107,50 @@ jQuery(document).ready(function() {
                       minSize: new go.Size(10, 16)
                     },
                     new go.Binding("text", "name").makeTwoWay()),
-                  $(go.TextBlock, "Gender", textStyle(),
+
+                  $(go.TextBlock, "Đời Thứ", textStyle(),
                     { row: 1, column: 0 }),
                   $(go.TextBlock, textStyle(),
                     {
-                      minSize: new go.Size(10, 14),
-                      row: 1, column: 1, columnSpan: 4,
-                      margin: new go.Margin(0, 0, 0, 3),
-                      editable: true, isMultiline: false
+                      row: 1, column: 1, columnSpan: 5,
+                      font: "15pt Segoe UI,sans-serif",
+                      editable: true, isMultiline: false,
+                      minSize: new go.Size(10, 16)
                     },
-                    new go.Binding("text", "gender").makeTwoWay()),
-                  $(go.TextBlock, "Role", textStyle(),
+                    new go.Binding("text", "doithu").makeTwoWay()),
+
+
+                  $(go.TextBlock, "Giới Tính", textStyle(),
                     { row: 2, column: 0 }),
                   $(go.TextBlock, textStyle(),
                     {
-                      row: 2, column: 1, columnSpan: 4,
+                      row: 2, column: 1, columnSpan: 5,
+                      font: "15pt Segoe UI,sans-serif",
+                      editable: true, isMultiline: false,
+                      minSize: new go.Size(10, 16)
+                    },
+                    new go.Binding("text", "gioitinh").makeTwoWay()),
+
+                  $(go.TextBlock, "Sinh Quán", textStyle(),
+                    { row: 3, column: 0 }),
+                  $(go.TextBlock, textStyle(),
+                    {
+                      minSize: new go.Size(10, 14),
+                      row: 3, column: 1, columnSpan: 4,
+                      margin: new go.Margin(0, 0, 0, 3),
+                      editable: true, isMultiline: false
+                    },
+                    new go.Binding("text", "sinhquan").makeTwoWay()),
+                  $(go.TextBlock, "Ngày Mất", textStyle(),
+                    { row: 4, column: 0 }),
+                  $(go.TextBlock, textStyle(),
+                    {
+                      row: 4, column: 1, columnSpan: 4,
                       minSize: new go.Size(10, 14),
                       isMultiline: false, editable: true,
                       margin: new go.Margin(0, 0, 0, 3)
                     },
-                    new go.Binding("text", "role").makeTwoWay()),
-                  $(go.TextBlock, "Birthday", textStyle(),
-                    { row: 3, column: 0 }),
-                  $(go.TextBlock, textStyle(),
-                    {
-                      editable: true, isMultiline: false,
-                      margin: new go.Margin(0, 0, 0, 3),
-                      row: 3, column: 1, columnSpan: 4,
-                      minSize: new go.Size(10, 14)
-                    },
-                    new go.Binding("text", "birthday").makeTwoWay()
-                  )
+                    new go.Binding("text", "tathe").makeTwoWay())
                 )
               )
             )
@@ -224,6 +237,6 @@ jQuery(document).ready(function() {
       {key: 7, color: "#92c3f3", name: "G", gender: "Female", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 2},
       {key: 10, color: "#f1aaf2", name: "H", gender: "Female", role: "1", birthday: "04/05/1888", image: "http://kb4images.com/images/image/38212997-image.jpg", total: 11, parent: 3}
     ]
-    myFullDiagram.model = new go.TreeModel(nodeDataArray);
+    myFullDiagram.model = new go.TreeModel(genealogies);
   }
 });

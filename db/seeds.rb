@@ -52,3 +52,8 @@ LocationCategory.create! position: 2, location: location_center, category: ls
 Post.create! title: "Giới thiệu", content: Faker::Markdown.ordered_list, summary: Faker::Demographic.race, pattern: "GioiThieu"
 
 Admin.create! email: "admin@gmail.com", password: 123123
+
+0.upto 10 do |x|
+  Genealogy.create! name: Faker::Name.name, gioitinh: "male", doithu: 1, tucdanh: "abc", conong: "a", conba: "b", sinhnam: Date.today, sinhquan: "abc", tathe: Date.today,
+    motang: "acb", biamo: "aa", kyong: 12, parent_id: x
+end
