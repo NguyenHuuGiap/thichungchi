@@ -8,6 +8,11 @@ class GenealogyController < ApplicationController
     end
   end
 
+  def show
+    @genealogy = Genealogy.find_by id: params[:id]
+    respond_to :js
+  end
+
   private
   def create_hash_genealogy genealogy
     img = genealogy.image.blank? && genealogy.male? ? "http://epi.com.gr/assets/img/team/male.png" : "http://epi.com.gr/assets/img/team/female.png"

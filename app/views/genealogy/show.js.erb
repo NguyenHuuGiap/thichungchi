@@ -1,0 +1,6 @@
+$('.body-genealogy').html('<%= j render "show_data", genealogy: @genealogy %>');
+$('.modal-genealogy').addClass('in');
+$('.modal-genealogy').show();
+$('.btn-close').click(function() {
+  $('.modal-genealogy').hide();
+})

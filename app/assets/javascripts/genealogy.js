@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
           },
           maxSelectionCount: 1,
           "toolManager.hoverDelay": 100,
-          "ObjectSingleClicked": showLocalOnLocalClick
+          "ObjectContextClicked": showLocalOnLocalClick
         });
 
     function textStyle() {
@@ -50,6 +50,15 @@ jQuery(document).ready(function() {
     };
     var myNodeTemplate =
       $(go.Node, "Auto",
+        {
+          doubleClick: function(e, node) {
+            debugger
+            jQuery.ajax({
+              type: 'GET',
+              url: '/genealogy/' + node.data.key
+            });
+          }
+        },
         { locationSpot: go.Spot.Center },
         new go.Binding("text", "key", go.Binding.toString),
         $(go.Shape, "Rectangle",
