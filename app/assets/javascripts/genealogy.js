@@ -52,7 +52,6 @@ jQuery(document).ready(function() {
       $(go.Node, "Auto",
         {
           doubleClick: function(e, node) {
-            debugger
             jQuery.ajax({
               type: 'GET',
               url: '/genealogy/' + node.data.key
@@ -232,6 +231,67 @@ jQuery(document).ready(function() {
       var selectedLocal = myLocalDiagram.findPartForKey(node.data.key);
       if (selectedLocal !== null) selectedLocal.isSelected = true;
     }
+  }
+
+  var enter_key = 13;
+  var arr_key = []
+  var count = 0
+  jQuery('#search-genealogy').on('keypress', function(e) {
+    if (e.which === enter_key) {
+      searchDiagram(this.value);
+    }
+  });
+  jQuery('.search-id').on('click', function() {
+    var input = document.getElementById('search-genealogy');
+    searchDiagram(input.value);
+  });
+
+  function searchDiagram(input) {
+    arr_key = []
+    if (!input) return;
+    var regex = new RegExp(input, "i");
+
+    if (input) {
+      var results = myFullDiagram.findNodesByExample({ name: regex}, {key_search: regex });
+      if (results.count === 0)
+      {
+        alert("không tìm thấy");
+      }
+      jQuery.each(results["Zh"]["td"], function(i, val) {
+        arr_key.push(val.key);
+      });
+      myFullDiagram.select(arr_key[0]);
+      appedTotal(arr_key.length);
+      appedResult(count + 1);
+    }
+  }
+
+  jQuery('.next-genealogy').on('click', function() {
+    if(arr_key.length > 0) {
+      count = count + 1
+      if(arr_key.length - 1 < count) {count = 0}
+      myFullDiagram.select(arr_key[count]);
+      result = count + 1
+      appedResult(result);
+    }
+  });
+
+  jQuery('.previous-genealogy').on('click', function() {
+    if(arr_key.length > 0) {
+      count = count - 1
+      if(count < 0) { count = arr_key.length - 1}
+      myFullDiagram.select(arr_key[count]);
+      result = count + 1
+      appedResult(result);
+    }
+  });
+
+  function appedResult(result) {
+    jQuery('.results').html(result);
+  }
+
+  function appedTotal(total) {
+    jQuery('.total').html(total);
   }
 
   function setupDiagram(total) {

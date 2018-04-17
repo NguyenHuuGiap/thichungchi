@@ -164,3 +164,49 @@
     display: block;
   }
 }
+
+a.next-genealogy {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a.next-genealogy:hover {
+  text-decoration: none;
+    background-color: #ddd;
+    color: black;
+}
+a.previous-genealogy {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a.previous-genealogy:hover {
+    text-decoration: none;
+    background-color: #ddd;
+    color: black;
+}
+
+.previous-genealogy {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next-genealogy {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.mgauto {
+  margin: auto;
+  margin-left: 10px;
+}
+
+.mgl-10 {
+  margin-left: 10px;
+}
