@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "category#index"
     resources :category
+    resources :genealogy
     resources :admin
     resources :post
     resources :upload_video

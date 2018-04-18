@@ -4,6 +4,9 @@ $(document).ready(function () {
   $(document).on('click', '.btn-close', function() {
     $('#myModal').hide();
   });
+  $(document).on('click', '.show_modal_genealogy', function() {
+    showGenealogy(this);
+  });
 })
 
 $(function() {
@@ -11,6 +14,14 @@ $(function() {
     readURL(this);
   });
 });
+
+function showGenealogy(data_href) {
+  href = $(data_href).data().href;
+  $.ajax({
+    type: 'GET',
+    url: href
+  });
+}
 
 function readURL(input) {
   var error_msg = 'File không được lớn hơn 5mb'

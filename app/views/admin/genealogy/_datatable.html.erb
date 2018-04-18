@@ -1,0 +1,23 @@
+<tr class="odd gradeX tr-<%= genealogy.id %>">
+  <td>
+    <%= genealogy.name %>
+  </td>
+  <td><%= image_tag(genealogy&.image&.url, size: "80") if genealogy.image.present? %></td>
+  <td class="center"><%= genealogy.gioitinh %></td>
+  <td class="center"><%= genealogy.tucdanh %></td>
+  <td class="center"><%= genealogy.sinhnam %></td>
+  <td class="center"><%= genealogy.sinhquan %></td>
+  <td class="center"><%= genealogy.conong %></td>
+  <td class="center"><%= genealogy.conba %></td>
+  <td>
+    <a href="javascript:void(0)" class="show_modal_genealogy" data-href="<%= admin_genealogy_path(genealogy) %>">
+      <i class="fa fa-eye fa-fw"></i>
+    </a>
+    <a href="<%= edit_admin_genealogy_path genealogy %>">
+      <i class="fa fa-edit fa-fw"></i>
+    </a>
+    <%= link_to admin_genealogy_path(genealogy), method: :delete, remote: true, data: { confirm: 'Bạn chắc chắn muốn xóa người này khỏi sơ đồ phả hệ?' } do %>
+      <i class="fa fa-trash-o fa-fw"></i>
+    <% end %>
+  </td>
+</tr>

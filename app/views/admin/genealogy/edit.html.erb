@@ -1,0 +1,126 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Create Category</h1>
+  </div>
+  <div id="flash-message">
+    <%= render "admin/shared/flash", flash: flash %>
+  </div>
+</div>
+<div class="panel-body">
+  <%= simple_form_for [:admin, @genealogy], html: {class: "form"} do |f| %>
+    <div class="modal-body">
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Tên</label>
+        <div class="col-10">
+          <%= f.input :name, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Giới Tính</label>
+        <div class="col-10">
+          <label class="radio-inline">
+            <%= f.radio_button :gioitinh, "male" %>
+            Nam</label>
+          <label class="radio-inline">
+            <%= f.radio_button :gioitinh, "female" %>
+            Nữ</label>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Đời Thứ</label>
+        <div class="col-10">
+          <%= f.input :doithu, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Tục Danh</label>
+        <div class="col-10">
+          <%= f.input :tucdanh, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Chọn Người Ở Trên</label>
+        <div class="col-10">
+          <%= f.input :parent_id, as: :select, collection: Genealogy.all, label: false,
+            input_html: {class: "selectpicker", data: {"show-subtext": true, "live-search": true}} %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Con Ông</label>
+        <div class="col-10">
+          <%= f.input :conong, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Con Bà</label>
+        <div class="col-10">
+          <%= f.input :conba, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Sinh Năm</label>
+        <div class="col-10">
+          <%= f.input :sinhnam, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Sinh Quán</label>
+        <div class="col-10">
+          <%= f.input :sinhquan, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Tạ Thế</label>
+        <div class="col-10">
+          <%= f.input :tathe, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Mộ Táng</label>
+        <div class="col-10">
+          <%= f.input :motang, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Bia Mộ</label>
+        <div class="col-10">
+          <%= f.input :biamo, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Kỵ Ông</label>
+        <div class="col-10">
+          <%= f.input :kyong, input_html: {class: "form-control"}, label: false %>
+        </div>
+      </div>
+      </br>
+      <div class="form-group row margin-center">
+        <label for="example-text-input" class="col-2 col-form-label">Hình Ảnh</label>
+        <div class="col-10">
+          <div class="image-preview-css <%= @genealogy.image.present? ? "image-preview" : nil %>" data-background="<%= @genealogy.image %>"></div>
+          </br>
+          <div>
+            <%= f.input :image, as: :file, error: false, label: false, wrapper: false,
+              input_html: {class: "change_image_preview"} %>
+            <div id="error-img">
+              <%= f.error :image, class: "form__item-error error-msg" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= f.submit 'Save', class: "btn btn-default btn-close" %>
+  <% end %>
+</div>
