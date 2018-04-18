@@ -1,5 +1,46 @@
 <%= javascript_include_tag 'genealogy', 'data-turbolinks-track': 'reload' %>
+<%= javascript_tag do %>
+  window.genealogies = <%= raw @arr_genealogies.to_json %>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 flex-container">
+      <div class="mgl-10">
+        <a href="#" class="previous-genealogy round">&#8249;</a>
+      </div>
+      <div class="col-lg-6 mgl-10 input-group custom-search-form">
+        <input type="text" class="form-control" id="search-genealogy">
+        <span class="input-group-btn">
+          <button class="btn btn-primary search-id" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+      <div class="mgl-10">
+        <a href="#" class="next-genealogy round">&#8250;</a>
+      </div>
+      <div class="mgauto">
+        Tổng số <span class="results">0</span> / <span class="total">0</span>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="sample">
   <div id="fullDiagram" style="height:250px;width:100%;border:1px solid black;margin:2px"></div>
   <div id="localDiagram" style="height:74%;width:100%;border:1px solid black;margin:2px"></div>
+</div>
+<div class="modal modal-genealogy fade" id="myModal" role="dialog">
+  <div class="modal-dialog dialog-genealogy">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Chi Tiết</h4>
+      </div>
+      <div class="modal-body body-genealogy">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

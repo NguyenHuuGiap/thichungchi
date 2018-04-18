@@ -124,7 +124,7 @@
   width: 120px;
 }
 
-.prev, .next {
+.prev, .nexts {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -138,17 +138,21 @@
   border-radius: 0 3px 3px 0;
 }
 
-.next {
+.nexts {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover, .nexts:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
+.dialog-genealogy {
+  width: 60%;
+}
+
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev, .nexts, .text {font-size: 11px}
 }
 
 @media only screen and (max-width: 500px) {
@@ -159,4 +163,50 @@
   .flex-container {
     display: block;
   }
+}
+
+a.next-genealogy {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a.next-genealogy:hover {
+  text-decoration: none;
+    background-color: #ddd;
+    color: black;
+}
+a.previous-genealogy {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a.previous-genealogy:hover {
+    text-decoration: none;
+    background-color: #ddd;
+    color: black;
+}
+
+.previous-genealogy {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next-genealogy {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.mgauto {
+  margin: auto;
+  margin-left: 10px;
+}
+
+.mgl-10 {
+  margin-left: 10px;
 }

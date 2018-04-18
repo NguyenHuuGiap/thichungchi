@@ -18,6 +18,7 @@
 //= require go.js
 //= require go-debug.js
 //= require bootstrap.min
+//= require boostrap-select.min
 //= require metisMenu.min
 //= require analytics.js
 //= require main.js
