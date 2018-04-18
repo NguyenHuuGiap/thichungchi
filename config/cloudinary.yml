@@ -1,24 +1,24 @@
 development:
-  cloud_name: dtyef3vlu
-  api_key: '464322581664712'
-  api_secret: M9xx7tWtJIkV852IBU8mTs3J4JA
+  cloud_name: dhtj2ifko
+  api_key: '417283593312236'
+  api_secret: Wkw3gnpD2egDnhZaeAxvO2ILYJk
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: dtyef3vlu
-  api_key: '464322581664712'
-  api_secret: M9xx7tWtJIkV852IBU8mTs3J4JA
+  cloud_name: dhtj2ifko
+  api_key: '417283593312236'
+  api_secret: Wkw3gnpD2egDnhZaeAxvO2ILYJk
   enhance_image_tag: true
   static_image_support: true
 staging:
-  cloud_name: dtyef3vlu
-  api_key: '464322581664712'
-  api_secret: M9xx7tWtJIkV852IBU8mTs3J4JA
+  cloud_name: dhtj2ifko
+  api_key: '417283593312236'
+  api_secret: Wkw3gnpD2egDnhZaeAxvO2ILYJk
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: dtyef3vlu
-  api_key: '464322581664712'
-  api_secret: M9xx7tWtJIkV852IBU8mTs3J4JA
+  cloud_name: dhtj2ifko
+  api_key: '417283593312236'
+  api_secret: Wkw3gnpD2egDnhZaeAxvO2ILYJk
   enhance_image_tag: true
   static_image_support: false
