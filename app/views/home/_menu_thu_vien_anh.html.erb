@@ -3,7 +3,7 @@
 </div>
 <div class="box-content block_gallery">
   <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
-    <% @image_tops.each do |image| %>
+    <% @image_lefts.each do |image| %>
       <a class="fancybox-buttons" data-fancybox-group="button"
         href="<%= image_url image.attachment %>">
         <%= image_tag image.attachment.url, alt: "" %>
