@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
   init();
+  setTimeout(function() {alert("Cây giả phả hiện nay vẫn đang tiếp tục được cập nhật dữ liệu");}, 400);
   function init() {
     if (window.goSamples) goSamples();
     var $ = go.GraphObject.make;
