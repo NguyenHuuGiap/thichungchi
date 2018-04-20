@@ -1,0 +1,8 @@
+/* line 1, /home/nguyen.huu.giap/workspace/gia_pha/app/assets/stylesheets/gojs-style.scss */
+body {
+  background: url(/assets/b_fullsize-c9e6cd9f97a0c4d9c6f9c53611fb6614c0cefb258ad395b3d5759277142e98f1.png) top center fixed;
+  background-size: cover;
+  font-size: 12px;
+  color: #620600;
+  font-family: Arial, Helvetica, sans-serif;
+}
