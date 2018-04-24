@@ -3,7 +3,7 @@
 </div>
 <div class="box-content">
   <ul class="list-unstyled">
-    <% @post_news.each do |post| %>
+    <% @post_news&.order(created_at: :desc)&.each do |post| %>
       <li>
         <%= link_to category_post_path(post.category, post) do %>
           <%= post&.title %>

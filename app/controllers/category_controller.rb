@@ -2,7 +2,7 @@ class CategoryController < ApplicationController
   before_action :load_category
 
   def show
-    @posts = @category.posts
+    @posts = @category.posts&.order(created_at: :desc)
   end
 
   private

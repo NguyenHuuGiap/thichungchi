@@ -9,10 +9,10 @@
         <a href="#" class="previous-genealogy round">&#8249;</a>
       </div>
       <div class="col-lg-6 mgl-10 input-group custom-search-form">
-        <input type="text" class="form-control" id="search-genealogy">
+        <input type="text" class="form-control" id="search-genealogy" placeholder="Nhập họ và tên rồi click tìm kiếm">
         <span class="input-group-btn">
           <button class="btn btn-primary search-id" type="button">
-            <span class="glyphicon glyphicon-search"></span>
+            <span>Tìm Kiếm</span>
           </button>
         </span>
       </div>
@@ -40,6 +40,38 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal-alert fade" id="myAlert" role="dialog">
+  <div class="modal-dialog dialog-alert">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" style="text-align: center">Thông Báo</h3>
+      </div>
+      <div class="modal-body body-alert">
+        <div>
+          <h4 class="alert alert-danger">Cây gia phả hiện vẫn đang tiếp tục được cập nhật dữ liệu.</h4>
+        <div>
+        <div class="alert alert-success">
+          <h4>Hướng dẫn cơ bản xem cây giả phả:</h4>
+          <div>
+            - Rê chuột vào vị trí người cần xem sẽ hiển thị các thông tin cơ bản
+          </div>
+          <div>
+            - Click chuột vào hình nhỏ phía trên sẽ hiển thị chi tiết lớn ở phía dưới
+          </div>
+          <div>
+            - Double click chuột trái vào tên người để hiển thị thông tin chi tiết
+          </div>
+          <div>
+            - Click chuột phải vào tên người để xem danh sách con cháu sanh hạ
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-alert-ok" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>

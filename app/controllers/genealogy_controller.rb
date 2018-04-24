@@ -17,12 +17,13 @@ class GenealogyController < ApplicationController
   def create_hash_genealogy genealogy
     img = genealogy.image.blank? && genealogy.male? ? "http://epi.com.gr/assets/img/team/male.png" : "http://epi.com.gr/assets/img/team/female.png"
     avatar = genealogy.image.blank? ? img : genealogy.image
+    gene = genealogy.gioitinh.to_s == "female" ? "Nữ" : (genealogy.gioitinh.to_s == "male" ? "Nam" : "")
     {
       key: genealogy.id.to_s,
       color: "#85b793",
       name: genealogy.name.to_s,
       image: avatar.to_s,
-      gioitinh: genealogy.gioitinh.to_s,
+      gioitinh: gene,
       doithu: genealogy.doithu.to_s,
       tucdanh: genealogy.tucdanh.to_s,
       conong: genealogy.conong.to_s,

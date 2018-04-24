@@ -4,7 +4,7 @@
       <span><%= category.name %></span>
     </div>
     <div class="box-body">
-      <% category.posts.each_with_index do |post, index| %>
+      <% category&.posts&.order(created_at: :desc).each_with_index do |post, index| %>
         <% if index.zero? %>
           <div class="list_new">
             <div class="col-md-4 no-left">

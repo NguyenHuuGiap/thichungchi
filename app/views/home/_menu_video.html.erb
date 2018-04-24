@@ -5,7 +5,7 @@
   <ul class="list-unstyled">
     <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
       <div class="video-url">
-        <% @attachments.each do |video| %>
+        <% @attachments.order(created_at: :desc).each do |video| %>
           <li>
             <img name="<%= video.name %>" url="<%= video.description %>" code="" src="">
           </li>
