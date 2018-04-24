@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   def load_categories
     @category_parents = Location.top&.first&.categories&.category_parent.includes :children
     @category_lefts = Location.left&.first&.categories.includes :posts
-    @attachments = Attachment.where target_type: "Video"
-    @image_tops = Attachment.where target_type: "Image", pattern: :top
-    @image_lefts = Attachment.where target_type: "Image", pattern: :left
+    @attachments = Attachment.order(created_at: :desc).where target_type: "Video"
+    @image_tops = Attachment.order(created_at: :desc).where target_type: "Image", pattern: :top
+    @image_lefts = Attachment.order(created_at: :desc).where target_type: "Image", pattern: :left
   end
 
   def load_posts

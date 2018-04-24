@@ -3,7 +3,7 @@
     <%= genealogy.name %>
   </td>
   <td><%= image_tag(genealogy&.image&.url, size: "80") if genealogy.image.present? %></td>
-  <td class="center"><%= genealogy.gioitinh %></td>
+  <td class="center"><%= genealogy.gioitinh.to_s == "female" ? "Nữ" : (genealogy.gioitinh.to_s == "male" ? "Nam" : "") %></td>
   <td class="center"><%= genealogy.tucdanh %></td>
   <td class="center"><%= genealogy.sinhnam %></td>
   <td class="center"><%= genealogy.sinhquan %></td>

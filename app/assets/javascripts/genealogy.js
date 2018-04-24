@@ -1,6 +1,12 @@
 jQuery(document).ready(function() {
   init();
-  setTimeout(function() {alert("Cây giả phả hiện nay vẫn đang tiếp tục được cập nhật dữ liệu");}, 400);
+  setTimeout(function() {
+    $('.modal-alert').addClass('in');
+    $('.modal-alert').show();
+    $('.btn-alert-ok').click(function() {
+      $('.modal-alert').hide();
+    })
+  }, 400);
   function init() {
     if (window.goSamples) goSamples();
     var $ = go.GraphObject.make;
@@ -111,7 +117,7 @@ jQuery(document).ready(function() {
                   $(go.TextBlock, textStyle(),
                     {
                       row: 0, column: 0, columnSpan: 5,
-                      font: "15pt Segoe UI,sans-serif",
+                      font: "12pt Segoe UI,sans-serif",
                       editable: true, isMultiline: false,
                       minSize: new go.Size(10, 16)
                     },
@@ -122,7 +128,7 @@ jQuery(document).ready(function() {
                   $(go.TextBlock, textStyle(),
                     {
                       row: 1, column: 1, columnSpan: 5,
-                      font: "15pt Segoe UI,sans-serif",
+                      font: "10pt Segoe UI,sans-serif",
                       editable: true, isMultiline: false,
                       minSize: new go.Size(10, 16)
                     },
@@ -134,13 +140,13 @@ jQuery(document).ready(function() {
                   $(go.TextBlock, textStyle(),
                     {
                       row: 2, column: 1, columnSpan: 5,
-                      font: "15pt Segoe UI,sans-serif",
+                      font: "10pt Segoe UI,sans-serif",
                       editable: true, isMultiline: false,
                       minSize: new go.Size(10, 16)
                     },
                     new go.Binding("text", "gioitinh").makeTwoWay()),
 
-                  $(go.TextBlock, "Sinh Quán", textStyle(),
+                  $(go.TextBlock, "Năm Sinh", textStyle(),
                     { row: 3, column: 0 }),
                   $(go.TextBlock, textStyle(),
                     {
@@ -149,8 +155,9 @@ jQuery(document).ready(function() {
                       margin: new go.Margin(0, 0, 0, 3),
                       editable: true, isMultiline: false
                     },
-                    new go.Binding("text", "sinhquan").makeTwoWay()),
-                  $(go.TextBlock, "Ngày Mất", textStyle(),
+                    new go.Binding("text", "sinhnam").makeTwoWay()),
+
+                  $(go.TextBlock, "Năm Mất", textStyle(),
                     { row: 4, column: 0 }),
                   $(go.TextBlock, textStyle(),
                     {

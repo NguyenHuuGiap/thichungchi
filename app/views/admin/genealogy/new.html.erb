@@ -20,11 +20,13 @@
         <label for="example-text-input" class="col-2 col-form-label">Giới Tính</label>
         <div class="col-10">
           <label class="radio-inline">
-            <%= f.radio_button :gioitinh, "male" %>
-            Nam</label>
+            <%= f.radio_button :gioitinh, "male", checked: true %>
+            Nam
+          </label>
           <label class="radio-inline">
             <%= f.radio_button :gioitinh, "female" %>
-            Nữ</label>
+            Nữ
+          </label>
         </div>
       </div>
       </br>
@@ -43,7 +45,7 @@
       </div>
       </br>
       <div class="form-group row margin-center">
-        <label for="example-text-input" class="col-2 col-form-label">Chọn Người Ở Trên</label>
+        <label for="example-text-input" class="col-2 col-form-label">Con Ông / Bà (Chọn Hoặc Nhập Tìm Kiếm)</label>
         <div class="col-10">
           <%= f.input :parent_id, as: :select, collection: Genealogy.all, label: false,
             input_html: {class: "selectpicker", data: {"show-subtext": true, "live-search": true}} %>
