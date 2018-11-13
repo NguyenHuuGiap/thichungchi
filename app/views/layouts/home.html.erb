@@ -14,56 +14,7 @@
     <%= yield :specific_page_js_on_head %>
   </head>
   <body>
-    <div class="flex-container">
-      <div class="left" id="visible-left">
-        <%= image_tag "banner1.jpg", alt: "" %>
-      </div>
-      <div>
-        <div class="container" id="header">
-          <%= render "home/menu" %>
-        </div>
-        <div class="container" id="content">
-          <div class="box-center">
-            <div class="box-header"></div>
-            <div class="box-body">
-              <div id="carousel-example-center" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                  <% @image_tops.each do |image| %>
-                    <div class="item">
-                      <a href="<%= image_url image.attachment %>">
-                        <%= image_tag image.attachment.url, alt: "" %>
-                      </a>
-                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <a class="nexts" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
-           <div class="row">
-              <div class="col-md-3 no-left">
-                <div class="new_left box">
-                  <%= render "home/menu_thu_vien_anh" %>
-                </div>
-                <div class="video_left box">
-                  <%= render "home/menu_video" %>
-                </div>
-                <div class="new_left box">
-                  <%= render "home/menu_noti_action" %>
-                </div>
-              </div>
               <%= yield %>
-            </div>
-        </div>
-        <div class="container" id="footer">
-          <%= render "layouts/footer" %>
-        </div>
-      </div>
-      <div class="right" id="visible-right">
-        <%= image_tag "banner2.jpg", alt: "" %>
-      </div>
-    </div>
     <%= javascript_include_tag "application" %>
     <script>
       var slideIndex = 1;

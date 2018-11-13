@@ -1,3 +1,336 @@
-<div class="col-md-9 no-padding">
-  <%= render "post_center" %>
-</div>
+<body onload="pageLoad();bindLikeBoxFloat2();">
+  <a class="chat_online" href="chat.html">
+  <i class="fa fa-comments" aria-hidden="true"></i> Chat nhóm Online
+  </a>
+  <div id="lay_thong_tin_nam_hinh">
+    <div class="wr_content_view">
+      <div class=" bg_vien">
+        <div class="persist-menu header col-xs-hide col-sm-hide">
+          <div class="center menu-principal col-sm-1 col-xs-1 col-md-1">
+          </div>
+        </div>
+        <!--////////////////////-->
+        <!-- MENU MOBILE -->
+        <!--////////////////////-->
+        <div class="col-xs-show col-sm-show menu-mobile">
+          <div class="wrapper">
+            <a href="thong-bao-thi.html#">MENU</a>
+            <button id="bt-menu-mobile">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+            </button>
+            <div class="clear"></div>
+          </div>
+          <div id="wrapper-menu-mobile">
+            <div class="wrapper">
+              <ul>
+                <li class="first">
+                  <span>MENU</span>
+                  <button id="bt-fechar-menu"><span class="">X</span></button>
+                  <div class="clear"></div>
+                </li>
+                <li><a href="nghi-dinh-thong-tu.html">Nghị định thông tư</a></li>
+                <li><a href="sat-hach.html">Sát hạch</a></li>
+                <li><a href="dang-ky.html">Đăng ký</a></li>
+                <li><a href="hinh-anh.html">Thư viện</a></li>
+                <li><a href="lien-he.html">Liên hệ</a></li>
+                <li><a href="thong-bao-thi.html">Thoát</a></li>
+              </ul>
+            </div>
+            <div class="block-menu-mobile"></div>
+          </div>
+        </div>
+        <div>
+          <div class="top_head" style="position: relative;">
+            <a class="logo" href="thong-bao-thi.html">
+            <%= image_tag "logo.png", alt: "", height: "120" %>
+            </a>
+            <div class="wr_sologan" style="color: #0f5aad;font-weight: bold;">
+              <div id="sologan" style="display: none; text-align: center;top: 30px;font-size: 20px;width: 90%;margin: auto;padding-top: 20px;">
+                Công ty cổ phần viện nghiên cứu phát triển nguồn lực Đông Nam Á
+                <br /> TRUNG TÂM KHẢO THÍ TRỰC TUYẾN RnD
+                <br />
+                <p style="color: red;">T.Lợi : 0914.023.472</p>
+              </div>
+              <%= image_tag "sologan.png", alt: "", height: "70" %>
+            </div>
+          </div>
+          <div class="khung_menu">
+            <div class="menu">
+              <ul id="nav">
+                <li>
+                  <div style="padding-top:20px; height:33px;" class="item_menu activi_menu">
+                    <a href="sat-hach.html">SÁT HẠCH</a>
+                  </div>
+                </li>
+                <li>
+                  <div style="padding-top:20px; height:33px;" class="item_menu ">
+                    <a href="dang-ky.html">ĐĂNG KÝ</a>
+                  </div>
+                </li>
+                <li>
+                  <div style="padding-top:20px; height:33px;" class="item_menu  ">
+                    <a href="hinh-anh.html">THƯ VIỆN</a>
+                  </div>
+                  <ul style="width:150px;">
+                    <li class="menu_dichvu">
+                      <div class="m4">
+                        <a href="hinh-anh.html">&raquo; Hình ảnh</a>
+                      </div>
+                    </li>
+                    <li class="menu_dichvu">
+                      <div class="m4">
+                        <a href="video.html">&raquo; Video</a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div style="padding-top:20px; height:33px;" class="item_menu ">
+                    <a href="lien-he.html">LIÊN HỆ</a>
+                  </div>
+                </li>
+                <li style="float: right;">
+                  <div style="padding-top:20px; height:33px;color: white;" class="item_menu">
+                    0914.023.472
+                  </div>
+                </li>
+              </ul>
+              <div style=" position:absolute; right:41px;top:18px;">
+                <a><%= image_tag "h1.png", alt: "" %></a>
+              </div>
+            </div>
+          </div>
+          <div class="khung_tin1">
+            <div style="padding-top:5px;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td valign="top" align="left" class="hidden_mobile">
+                    <div class="tin_tuc_home" style="margin-top: 8px;">
+                      <div class="tieude_tin1 tt_home">
+                        <a href="nghi-dinh-thong-tu.html">NGHỊ ĐỊNH THÔNG TƯ</a>
+                      </div>
+                      <div style="padding-top:5px;">
+                        <div>
+                          <div class="slide_tintuc scrollbar" id="style-5">
+                            <ul>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 4px;">
+                                    <a title="NGHỊ ĐỊNH - Về quản lý chi phí đầu tư xây dựng công trình" style="color: white;" target="_blank" href="public/upload/file/a-nghi-dinh-ve-quan-ly-chi-phi-dau-tu-xay-dung-cong-trinh-update-01-10-2018-time-11-11.pdf">
+                                    NGHỊ ĐỊNH - Về quản lý chi phí đầu tư xây dựng công trình <a style="color: white;" href="public/upload/file/a-nghi-dinh-ve-quan-ly-chi-phi-dau-tu-xay-dung-cong-trinh-update-01-10-2018-time-11-11.pdf"></a>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 4px;">
+                                    <a title="NGHỊ ĐỊNH - Sửa đổi, bổ sung, bãi bỏ một số quy định về điều kiên đầu tư kinh doanh thuộc các lĩnh vực quản lý nhà nước của Bộ Xây Dựng" style="color: white;" target="_blank" href="public/upload/file/a-nghi-dinh-sua-doi-bo-sung-bai-bo-mot-so-quy-dinh-ve-dieu-kien-dau-tu-kinh-doanh-thuoc-cac-linh-vuc-quan-ly-nha-nuoc-cua-bo-xay-dung-update-01-10-2018-time-10-59.pdf">
+                                    NGHỊ ĐỊNH - Sửa đổi, bổ sung, bãi bỏ một số quy định về điều kiên&#8230; <a style="color: white;" href="public/upload/file/a-nghi-dinh-sua-doi-bo-sung-bai-bo-mot-so-quy-dinh-ve-dieu-kien-dau-tu-kinh-doanh-thuoc-cac-linh-vuc-quan-ly-nha-nuoc-cua-bo-xay-dung-update-01-10-2018-time-10-59.pdf"></a>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 4px;">
+                                    <a title="NGHỊ ĐỊNH - Về quản lý dự án đầu tư xây dựng" style="color: white;" target="_blank" href="public/upload/file/a-nghi-dinh-ve-quan-ly-du-an-dau-tu-xay-dung-update-01-10-2018-time-10-57.pdf">
+                                    NGHỊ ĐỊNH - Về quản lý dự án đầu tư xây dựng <a style="color: white;" href="public/upload/file/a-nghi-dinh-ve-quan-ly-du-an-dau-tu-xay-dung-update-01-10-2018-time-10-57.pdf"></a>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 4px;">
+                                    <a title="NGHỊ ĐỊNH - Về sửa đổi, bổ sung một số điều Nghị định số 59/2015/NĐ-CP Ngày 18 tháng 6 năm 2015 của Chính phủ về quản lý dự án đầu tư xây dựng" style="color: white;" target="_blank" href="public/upload/file/a-nghi-dinh-ve-sua-doi-bo-sung-mot-so-dieu-nghi-dinh-so-592015nd-cp-ngay-18-thang-6-nam-2015-cua-chinh-phu-ve-quan-ly-du-an-dau-tu-xay-dung-update-01-10-2018-time-10-56.pdf">
+                                    NGHỊ ĐỊNH - Về sửa đổi, bổ sung một số điều Nghị định số 59/2015/NĐ-CP&#8230; <a style="color: white;" href="public/upload/file/a-nghi-dinh-ve-sua-doi-bo-sung-mot-so-dieu-nghi-dinh-so-592015nd-cp-ngay-18-thang-6-nam-2015-cua-chinh-phu-ve-quan-ly-du-an-dau-tu-xay-dung-update-01-10-2018-time-10-56.pdf"></a>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 4px;">
+                                    <a title="THÔNG TƯ - Sửa đổi, bổ sung một số điều của các thông tư liên quan đến quản lý dự án đầu tư xây dựng" style="color: white;" target="_blank" href="public/upload/file/a-thong-tu-sua-doi-bo-sung-mot-so-dieu-cua-cac-thong-tu-lien-quan-den-quan-ly-du-an-dau-tu-xay-dung-update-01-10-2018-time-10-54.pdf">
+                                    THÔNG TƯ - Sửa đổi, bổ sung một số điều của các thông tư liên quan đến&#8230; <a style="color: white;" href="public/upload/file/a-thong-tu-sua-doi-bo-sung-mot-so-dieu-cua-cac-thong-tu-lien-quan-den-quan-ly-du-an-dau-tu-xay-dung-update-01-10-2018-time-10-54.pdf"></a>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 4px;">
+                                    <a title="THÔNG TƯ - Hướng dẫn về năng lực của tổ chức, cá nhân tham gia hoạt động xây dựng" style="color: white;" target="_blank" href="public/upload/file/a-thong-tu-huong-dan-ve-nang-luc-cua-to-chuc-ca-nhan-tham-gia-hoat-dong-xay-dung-update-01-10-2018-time-10-52.pdf">
+                                    THÔNG TƯ - Hướng dẫn về năng lực của tổ chức, cá nhân tham gia hoạt&#8230; <a style="color: white;" href="public/upload/file/a-thong-tu-huong-dan-ve-nang-luc-cua-to-chuc-ca-nhan-tham-gia-hoat-dong-xay-dung-update-01-10-2018-time-10-52.pdf"></a>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 4px;">
+                                    <a title="THÔNG TƯ - Quy định về phân cấp công trình xây dựng và hướng dẫn áp dụng trong quản lý hoạt động đầu tư xây dựng" style="color: white;" target="_blank" href="public/upload/file/a-thong-tu-quy-dinh-ve-phan-cap-cong-trinh-xay-dung-va-huong-dan-ap-dung-trong-quan-ly-hoat-dong-dau-tu-xay-dung-update-01-10-2018-time-10-45.pdf">
+                                    THÔNG TƯ - Quy định về phân cấp công trình xây dựng và hướng dẫn áp&#8230; <a style="color: white;" href="public/upload/file/a-thong-tu-quy-dinh-ve-phan-cap-cong-trinh-xay-dung-va-huong-dan-ap-dung-trong-quan-ly-hoat-dong-dau-tu-xay-dung-update-01-10-2018-time-10-45.pdf"></a>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div style="clear:both">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td valign="top" align="left" style="padding-top:3px;">
+                    <div class="tin_tuc_home" style="margin-top: 8px;">
+                      <div class="tieude_tin1 tt_home">
+                        <a href="tin-tuc-su-kien.html">TIN TỨC - SỰ KIỆN</a>
+                      </div>
+                      <div style="padding-top:5px;">
+                        <div>
+                          <div class="slide_tintuc" id="sli2">
+                            <ul>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 10px;margin-top: 10px;">
+                                    <img src="public/upload/thumbs_resize/a580990803046-update-15-10-2018.png" style="float: left;width: 60px;height: 50px;background: white;border-radius: 3px;" />
+                                    <a style="color: white;float: left;width: 60%;margin-left: 10px;" href="huong-dan-tao-tai-khoan-dang-ky-hoc.html">
+                                    Hướng dẫn tạo tài khoản đăng ký học                                                            </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 10px;margin-top: 10px;">
+                                    <img src="public/upload/thumbs_resize/a543428473031-update-04-10-2018.jpg" style="float: left;width: 60px;height: 50px;background: white;border-radius: 3px;" />
+                                    <a style="color: white;float: left;width: 60%;margin-left: 10px;" href="dem-nguoc-gio-g-don-cho-vinfast.html">
+                                    Đếm ngược giờ G đón chờ VinFast                                                            </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 10px;margin-top: 10px;">
+                                    <img src="public/upload/thumbs_resize/a125942026667-update-16-08-2018.jpg" style="float: left;width: 60px;height: 50px;background: white;border-radius: 3px;" />
+                                    <a style="color: white;float: left;width: 60%;margin-left: 10px;" href="ong-nguyen-cong-lang-gop-cong-cho-vu-nhom-thau-tom-nha-cong-san-ra-sao.html">
+                                    Ông Nguyễn Công Lang "góp công" cho Vũ "nhôm" thâu tóm nhà công sản ra sao?                                                            </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 10px;margin-top: 10px;">
+                                    <img src="public/upload/thumbs_resize/a664351220398-update-16-08-2018.jpg" style="float: left;width: 60px;height: 50px;background: white;border-radius: 3px;" />
+                                    <a style="color: white;float: left;width: 60%;margin-left: 10px;" href="da-nang-xin-tra-lai-tien.html">
+                                    Đà Nẵng xin trả lại tiền                                                             </a>
+                                  </div>
+                                </div>
+                              </li>
+                              <li style="width: 100%!important;height: auto!important;">
+                                <div class="item_tin_tuc_home">
+                                  <div class="tieude_tin" style="height:auto;margin-bottom: 10px;margin-top: 10px;">
+                                    <img src="public/upload/thumbs_resize/tmp/tmp.png" style="float: left;width: 60px;height: 50px;background: white;border-radius: 3px;" />
+                                    <a style="color: white;float: left;width: 60%;margin-left: 10px;" href="bo-tri-va-thiet-ke-chi-tiet-ket-cau-btct-bang-revit-structure-rst-va-autocad-structural-detailing-asd-15-thang.html">
+                                    Bố trí và thiết kế chi tiết kết cấu BTCT bằng Revit Structure (RST) và AutoCAD Structural Detailing (ASD)&#8230;                                                            </a>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div style="clear:both">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="khung_noi_dung">
+        <div class="wr_thong_bao_chon">
+          <h1>THI THỬ MIỄN PHÍ</h1>
+        </div>
+        <div class="bt_chon" style="margin-bottom: 10px;">
+          <strong>Định giá xây dựng  - cấp mới </strong>
+          <div class="wr_right">
+            <a href="sat-hach.html">Bắt đầu</a>
+            <a class="bt_tl" target="_blank" style="background: #008040;color: white;" href="public/upload/file/a-dinh-gia-xay-dung0-update-16-08-2018-time-15-47.pdf">Tài Liệu</a>
+          </div>
+        </div>
+        <div class="bt_chon" style="margin-bottom: 10px;">
+          <strong>Định Giá Xây Dựng  - chuyển đổi </strong>
+          <div class="wr_right">
+            <a href="sat-hach.html">Bắt đầu</a>
+            <a class="bt_tl" target="_blank" style="background: #008040;color: white;" href="http://thichungchihanhnghe.com/public/upload/file/not_file">Tài Liệu</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="copyright_hg">
+          <table width="100%" border="0" height="50" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top" class="footer_div">
+                <div>
+                  <div style="padding:1px;font-size: 13px;color: white;line-height: 10px;">
+                    <h4><span style="font-size:16px"><strong>C&ocirc;ng ty cổ phần viện nghi&ecirc;n cứu ph&aacute;t triển nguồn lực Đ&ocirc;ng Nam &Aacute;</strong></span></h4>
+                    <p><span style="font-size:14px"><u><em><strong>Cơ sở 1:</strong></em></u></span></p>
+                    <p><span style="font-size:14px"><strong>133 L&ecirc; Đ&igrave;nh L&yacute; &ndash; Quận Thanh Kh&ecirc; &ndash; Th&agrave;nh phố Đ&agrave; Nẵng</strong></span></p>
+                    <p><span style="font-size:14px"><u><em><strong>Cơ sở 2:</strong></em></u></span></p>
+                    <p><span style="font-size:14px"><strong>151 Nguyễn Lương Bằng &ndash; Quận Li&ecirc;n Chiểu &ndash; Th&agrave;nh phố Đ&agrave; Nẵng</strong></span></p>
+                    <p><a href="http://www.thichungchihanhnghe.com"><span style="color:#ffffff">Chung chi hanh nghe giam sat</span></a><span style="color:#ffffff"> | </span><a href="http://www.thichungchihanhnghe.com"><span style="color:#ffffff">Lam ho so chung chi hanh nghe</span></a><span style="color:#ffffff"> | </span><a href="http://www.thichungchihanhnghe.com"><span style="color:#ffffff">Chung chi hanh nghe xay dung</span></a><span style="color:#ffffff"> | </span><a href="http://www.thichungchihanhnghe.com"><span style="color:#ffffff">Thi chung chi hanh nghe</span></a></p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                  </div>
+                </div>
+              </td>
+              <td valign="top">
+                <div>
+                  <a href="http://www.facebook.com/ttenter" target="_blank">
+                  <%= image_tag "fb.png", alt: "" %>
+                  </a>
+                </div>
+              </td>
+              <td valign="top">
+              </td>
+              <td valign="top" class="footer_div2">
+                <div style="float:right ;width:135px;font-size: 14px;">
+                  <div>
+                    <div style="margin-right:2px; text-align:right;color: white;">
+                      Powered (+) Thiết kế <a style="color: white;" target href="http://danadigital.net">Danadigital.net</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="coppy_right_mobile">
+          <strong style="text-transform: uppercase;">Công ty cổ phần viện nghiên cứu phát triển nguồn lực đông nam á</strong>
+          <br /> Cơ sở 1: 133 Lê Đình Lý – Q. Thanh Khê – TP Đà Nẵng
+          <br /> Tel: 0511.3692005 – 0511.2217710
+          <br /> Fax : 0511.3692297 – Website : www.thichungchihanhnghe.com
+          <br /> Cơ sở 2: 151 Nguyễn Lương Bằng – Q Liên Chiểu – TP Đà Nẵng
+          <br /> Tel : 0511.6270227
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="thoangbao_mgs">
+    <div id="luu_result">
+    </div>
+  </div>
+  <div class="popup_photo" id="popup_photo">
+    <div id="show_thong_tin">
+    </div>
+  </div>
+</body>
+</html>
