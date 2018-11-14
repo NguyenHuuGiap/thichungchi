@@ -46,7 +46,7 @@ class Admin::AdminController < Admin::BaseController
   end
 
   def load_admin_new
-    @admin = Admin.new
+    # @admin = Admin.new
   end
 
   def admin_params

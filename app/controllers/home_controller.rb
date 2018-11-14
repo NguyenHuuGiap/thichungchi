@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!
 
   def index
-    # @category_selected = Location.center&.first&.categories&.includes :posts
+    @realms = Realm.includes realm_types: :rank_types
+    @exam = current_user.exams.new
   end
 end

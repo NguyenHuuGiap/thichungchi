@@ -13,46 +13,19 @@
     <%= yield :specific_page_css %>
     <%= yield :specific_page_js_on_head %>
   </head>
-  <body>
-              <%= yield %>
+  <body onload="pageLoad();bindLikeBoxFloat2();">
+    <a class="chat_online" href="chat.html">
+      <i class="fa fa-comments" aria-hidden="true"></i> Chat nhóm Online
+    </a>
+    <%= yield %>
+    <div class="thoangbao_mgs">
+      <div id="luu_result">
+      </div>
+    </div>
+    <div class="popup_photo" id="popup_photo">
+      <div id="show_thong_tin">
+      </div>
+    </div>
     <%= javascript_include_tag "application" %>
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("item");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex-1].style.display = "block";
-      }
-
-      var myIndex = 0;
-      carousel();
-
-      function carousel() {
-          var i;
-          var x = document.getElementsByClassName("item");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}
-          x[myIndex-1].style.display = "block";
-          setTimeout(carousel, 5500);
-      }
-    </script>
   </body>
 </html>
