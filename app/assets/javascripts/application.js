@@ -30,3 +30,7 @@
 //= require embed_video
 //= require froala_editor.pkgd.min.js
 //= require cloudinary
+//= require default.js
+//= require hoang_gia_ajax.js
+//= require init.js
+//= require jquery.tooltip

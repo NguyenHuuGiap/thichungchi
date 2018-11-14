@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :user, controllers: {sessions: "session"}
   devise_for :admin, controllers: {sessions: "admin/session"}
   root "home#index"
   # resources :category do
   #   resources :post
   # end
   # resources :gioi_thieu, only: :index
-  # resources :genealogy
+  resources :exams
   namespace :admin do
     root "category#index"
     resources :category

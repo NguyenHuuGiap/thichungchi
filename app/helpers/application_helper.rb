@@ -12,4 +12,10 @@ module ApplicationHelper
     source = "IMG_7151.JPG" if source.blank?
     super(source, options)
   end
+
+  def value_selects objects
+    objects.map do |object|
+      [object.name, object.id]
+    end
+  end
 end
