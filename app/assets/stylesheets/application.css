@@ -26,5 +26,9 @@
  *= require goSamples.css
  *= require sweet-alert.css
  *= require tracnghiem.css
+ *= require jquery.datetimepicker.min
+
+ *= require commons.css
+ 
  *= require_self
  */

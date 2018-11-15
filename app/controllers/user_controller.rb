@@ -15,7 +15,7 @@ class UserController < ActionController::Base
   #   else
   #     flash[:error] = "Thêm mới thất bại"
   #   end
-  #   redirect_to admin_admin_index_path
+  #   redirect_to admin_admins_path
   # end
   #
   # def edit
@@ -28,7 +28,7 @@ class UserController < ActionController::Base
   #   else
   #     flash[:error] = "Cập nhật thất bại"
   #   end
-  #   redirect_to admin_admin_index_path
+  #   redirect_to admin_admins_path
   # end
 
   # def destroy
