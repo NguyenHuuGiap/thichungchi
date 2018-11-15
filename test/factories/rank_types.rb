@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :rank_type do
     name{"Hạng I"}
-    association :realm_type
+    number_question{25}
   end
 end

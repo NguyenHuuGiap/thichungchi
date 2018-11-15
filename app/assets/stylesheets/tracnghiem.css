@@ -1,0 +1,7 @@
+@media all and (max-width:750px) {
+        .wr_content_ch img{
+            width: 100%!important;
+            height: auto!important;
+        }
+
+    }

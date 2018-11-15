@@ -33,4 +33,7 @@
 //= require default.js
 //= require hoang_gia_ajax.js
 //= require init.js
+//= require jquery.countdownTimer.js
+//= require tracnghiem.js
+//= require sweet-alert.js
 //= require jquery.tooltip
