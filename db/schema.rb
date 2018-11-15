@@ -126,26 +126,27 @@ ActiveRecord::Schema.define(version: 20181114081652) do
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.string "content"
+    t.bigint "realm_id"
+    t.bigint "realm_type_id"
     t.bigint "specialize_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["realm_id"], name: "index_questions_on_realm_id"
+    t.index ["realm_type_id"], name: "index_questions_on_realm_type_id"
     t.index ["specialize_id"], name: "index_questions_on_specialize_id"
   end
 
   create_table "rank_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.bigint "realm_type_id"
+    t.integer "number_question"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["realm_type_id"], name: "index_rank_types_on_realm_type_id"
   end
 
   create_table "realm_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.bigint "realm_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["realm_id"], name: "index_realm_types_on_realm_id"
   end
 
   create_table "realms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -185,8 +186,8 @@ ActiveRecord::Schema.define(version: 20181114081652) do
   add_foreign_key "exam_questions", "exams"
   add_foreign_key "exam_questions", "questions"
   add_foreign_key "exams", "users"
+  add_foreign_key "questions", "realm_types"
+  add_foreign_key "questions", "realms"
   add_foreign_key "questions", "specializes"
-  add_foreign_key "rank_types", "realm_types"
-  add_foreign_key "realm_types", "realms"
   add_foreign_key "specializes", "rank_types"
 end

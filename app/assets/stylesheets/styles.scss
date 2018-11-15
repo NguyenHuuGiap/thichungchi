@@ -2634,3 +2634,502 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
                  margin-right: 3%!important;
              }
      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     * {margin: 0; padding: 0;}
+
+
+     html{
+         height: 100%;
+         background-color: #f9f9f9;
+         background-image: url(bg.gif);
+         background-attachment: fixed;
+     }
+
+     body {
+     	font-family: Arial;
+         overflow-x: hidden;
+         min-height: 1000px;
+     }
+
+     /*form styles*/
+     #msform {
+         width: 900px;
+         margin: auto;
+         text-align: center;
+         position: relative;
+             margin-top: 40px;
+     }
+     #msform fieldset {
+     	background: white;
+     	border: 0 none;
+     	border-radius: 3px;
+     	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+     	padding: 20px 30px;
+     	box-sizing: border-box;
+     	width: 80%;
+     	margin: 0 10%;
+
+     	/*stacking fieldsets above each other*/
+     	position: relative;
+     }
+     /*Hide all except first fieldset*/
+     #msform fieldset:not(:first-of-type) {
+     	display: none;
+     }
+     /*inputs*/
+     #msform input, #msform textarea {
+     	padding: 15px;
+     	border: 1px solid #ccc;
+     	border-radius: 3px;
+     	margin-bottom: 10px;
+     	width: 100%;
+     	box-sizing: border-box;
+     	color: #2C3E50;
+     	font-size: 13px;
+     }
+     /*buttons*/
+     #msform .action-button {
+     	width: 120px;
+     	background: #278cae;
+     	font-weight: bold;
+     	color: white;
+     	border: 0 none;
+     	border-radius: 1px;
+     	cursor: pointer;
+     	padding: 10px 5px;
+     	margin: 10px 5px;
+     }
+     .ket_thuc{
+         background: #FF8000!important;
+     }
+     #msform .action-button:hover, #msform .action-button:focus {
+     	box-shadow: 0 0 0 2px white, 0 0 0 3px #278cae;
+     }
+     #msform .ket_thuc:hover, #msform .ket_thuc:focus {
+     	box-shadow: 0 0 0 2px white, 0 0 0 3px #FF8000;
+     }
+     /*headings*/
+     .fs-title {
+     	font-size: 15px;
+     	text-transform: uppercase;
+     	color: #2C3E50;
+     	margin-bottom: 10px;
+     }
+     .fs-subtitle {
+     	font-weight: normal;
+     	font-size: 13px;
+     	color: #666;
+     	margin-bottom: 20px;
+     }
+     /*progressbar*/
+     #progressbar {
+         margin-bottom: 20px;
+         overflow: hidden;
+         counter-reset: step;
+     }
+     #progressbar li {
+         list-style-type: none;
+         color: white;
+         text-transform: uppercase;
+         font-size: 9px;
+         width: 5%;
+         float: left;
+         position: relative;
+         cursor: pointer;
+     }
+     #progressbar li:before {
+         content: counter(step);
+         counter-increment: step;
+         width: 40px;
+         line-height: 40px;
+         display: block;
+         font-size: 14px;
+         color: #333;
+         background: white;
+         border-radius: 3px;
+         margin: 0 auto 5px auto;
+         cursor: pointer;
+         border-bottom: 3px solid #627e87;
+     }
+
+     #progressbar li:first-child:after {
+     	/*connector not needed before the first step*/
+     	content: none;
+     }
+     /*marking active/completed steps green*/
+     /*The number of the step and the connector before it = green*/
+     #progressbar li.da_xem:before, #progressbar li.da_xem:after {
+         background: #278cae;
+         color: white;
+     }
+     #progressbar li.active:before, #progressbar li.active:after {
+         background: #278cae;
+         color: white;
+     }
+     #progressbar li:before:hover{
+         background: #278cae!important;
+         color: white;
+     }
+
+     #title_tracnghiem {
+         width: 900px;
+         margin: auto;
+         height: 70px;
+         background: white;
+         border: 0 none;
+         margin-top: 30px;
+         margin-bottom: 20px;
+         border-radius: 3px;
+         box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+         margin-top: -9px;
+     }
+     .left_tn {
+         width: 70px;
+         height: 70px;
+         float: left;
+         text-align: center;
+         line-height: 70px;
+         font-size: 40px;
+         background: #278cae;
+         color: white;
+     }
+     .right_tn {
+         float: left;
+         width: 830px;
+         height: 70px;
+     }
+     .top_right_tn {
+         width: 98%;
+         height: 35px;
+         padding-left: 2%;
+         float: left;
+         line-height: 35px;
+         background: #278cae;
+         color: white;
+         text-align: left;
+     }
+     .bottom_right_tn {
+         width: 100%;
+         height: 35px;
+         float: left;
+         line-height: 35px;
+     }
+     #countdown {
+         width: 100%;
+         height: 30px;
+         text-align: center;
+         margin: auto;
+     }
+     .color-full {
+         background: #53bb74;
+     }
+     #msform fieldset {
+         background: white;
+         border: 0 none;
+         border-radius: 3px;
+         box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+         padding: 20px 30px;
+         box-sizing: border-box;
+         width: 100%;
+         margin-left: 0px;
+         /* margin: 0 10%; */
+         position: absolute;
+         text-align: left;
+     }
+     .wr_dap_an{
+         width: 94%;
+         float: left;
+         padding: 3%;
+         border: solid 1px #d0d0d0;
+         border-radius: 10px;
+         margin-top: 20px;
+         -moz-box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+         -webkit-box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+         box-shadow: inset 2px 2px 7px rgb(232, 232, 232), 1px 1px 5px rgba(255, 255, 255, 1);
+     }
+
+     .title_cau {
+         font-weight: bold;
+         width: 100%;
+         height: 30px;
+         line-height: 30px;
+         float: left;
+         margin-bottom: 20px;
+         font-size: 20px;
+             text-align: left;
+         color: #12a0cb;
+         border-bottom: solid 1px #e9e4e4;
+     }
+     .cau_hoi {
+         width: 100%;
+         float: left;
+         margin-bottom: 20px;
+         font-weight: bold;
+         font-size: 20px;
+         line-height: 30px;
+             text-align: left;
+     }
+     .wr_dap_an {
+         float: left;
+     }
+     .row_dap_an {
+         width: 100%;
+         float: left;
+         margin-bottom: 15px;
+     }
+     .row_dap_an:last-child {
+         width: 100%;
+         float: left;
+         margin-bottom:0px;
+     }
+     .row_dap_an input {
+         width: 20px!important;
+         height: 20px;
+         float: left;
+         margin-top: -1px;
+         margin-right: 10px;
+     }
+     .row_dap_an label {
+         cursor: pointer;
+         font-size: 17px;
+         width: 80%;
+         float: left;
+         min-height: 20px;
+         text-align: left;
+         line-height: 25px;
+         margin-top: -3px;
+     }
+     .row_dap_an label:hover {
+         cursor: pointer;
+         font-size: 17px;
+         width: 80%;
+         float: left;
+         min-height: 20px;
+         color: #0080C0;
+     }
+     .clear{
+         width: 100%;
+         margin-top: 30px;
+         float: left;
+     }
+
+     .bt_home {
+         padding: 10px 15px;
+         background: #0a91ba;
+         color: white;
+         text-decoration: none!important;
+         margin: auto;
+         border-radius: 5px;
+         float: left;
+         margin-left: 38px;
+         border-bottom: solid 3px #dbdbdb;
+     }
+     .bt_home:hover{
+         border-bottom: solid 0px #b4aeae;
+     }
+     .num{
+         font-weight: bold;
+     }
+     .info_baithi{
+         width: 100%;
+         float: left;
+         padding-left: 20px;
+         margin-top: 30px;
+     }
+     .wr_kq{
+         width:100%;
+         float: left;
+     }
+     .wr_content{
+         width: 700px;
+         margin: auto;
+     }
+     .content {
+         width: 100%;
+         float: left;
+         box-shadow: 0 0 10px rgba(0,0,0,.5);
+         background: white;
+         padding: 30px;
+         margin-top: 30px;
+     }
+     .wr_head{
+         width: 100%;
+         float: left;
+     }
+     .title_top {
+         text-transform: uppercase;
+         width: 100%;
+         text-align: center;
+         font-size: 17px;
+         min-height: 40px;
+         background: #0a91ba;
+         line-height: 40px;
+         color: #ffffff;
+         border-radius: 10px 10px 0px 0px;
+         float: left;
+     }
+     .wr_content_hv {
+         width: 99.8%;
+         float: left;
+         /* margin-top: 10px; */
+         border: solid 1px #DBDBDB;
+         background: white;
+         border-radius: 0px 0px 10px 10px;
+     }
+     .hv_left{
+         width: 450px;
+         float: left;
+         min-height: 150px;
+     }
+     .hv_left .row{
+         float: left;
+         height: 40px;
+         line-height: 40px;
+         border-bottom: solid 1px #DBDBDB;
+         padding-left: 20px;
+         padding-right: 20px;
+         font-size: 15px;
+     }
+     .hv_left .row:last-child{
+         border-bottom: solid 0px #DBDBDB;
+     }
+     .hv_left .row label{
+         width: 120px;
+         float: left;
+     }
+     .hv_left .row span{
+         float: left;
+         width: 280px;
+     }
+     .hv_right {
+         width: 230px;
+         float: left;
+         height: 244px;
+         padding-left: 10px;
+         border-left: solid 1px #DBDBDB;
+     }
+     .hv_right span{
+         width: 100%;
+         height: 40px;
+         text-align: center;
+         line-height: 40px;
+         float: left;
+         border-bottom: solid 1px #DBDBDB;
+     }
+     .hv_right strong{
+         width: 100%;
+         text-align: center;
+         float: left;
+         font-size: 80px;
+         color: #0080C0;
+         margin-top: 20px;
+         margin-bottom: 30px;
+         margin-top: 30px;
+         text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+     }
+     @media all and (max-width:750px) {
+         #msform {
+             width: 100%;
+             margin: auto;
+             text-align: center;
+             position: relative;
+             margin-top: 40px;
+         }
+         #title_tracnghiem {
+         width: 100%;
+         margin: auto;
+         height: auto;
+         background: white;
+         border: 0 none;
+         margin-top: 30px;
+         margin-bottom: 20px;
+         border-radius: 3px;
+         box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+         margin-top: -9px;
+         float: left;
+     }
+     .left_tn {
+         width: 70px;
+         height: auto;
+         float: left;
+         text-align: center;
+         line-height: 70px;
+         font-size: 40px;
+         background: #278cae;
+         color: white;
+         display: none;
+     }
+     .top_right_tn div{
+         width: 100%!important;
+         text-align: center!important;
+     }
+     .top_right_tn div:first-child{
+         display: none;
+     }
+     .right_tn {
+         float: left;
+         width: 100%;
+         height: auto;
+     }
+     .bottom_right_tn div{
+         width: 100%!important;
+         text-align: center!important;
+     }
+     .bottom_right_tn {
+         width: 100%;
+         height: auto;
+         float: left;
+         line-height: 35px;
+     }
+     #progressbar {
+         margin-bottom: 20px;
+         overflow: hidden;
+         counter-reset: step;
+         /* float: left; */
+         margin-top: 20px;
+         display: block;
+         width: 100%;
+     }
+     #progressbar li {
+         list-style-type: none;
+         color: white;
+         text-transform: uppercase;
+         font-size: 9px;
+         width: 11%;
+         float: left;
+         position: relative;
+         cursor: pointer;
+     }
+     .row_dap_an label {
+         cursor: pointer;
+         font-size: 17px;
+         width: 85%;
+         float: left;
+         min-height: 20px;
+         text-align: left;
+         line-height: 25px;
+         margin-top: -3px;
+     }
+     .row_dap_an label:hover {
+         width: 85%;
+     }
+
+     }

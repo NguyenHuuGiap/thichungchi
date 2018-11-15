@@ -1,3 +1,3 @@
 class Realm < ApplicationRecord
-  has_many :realm_types
+  has_many :questions
 end

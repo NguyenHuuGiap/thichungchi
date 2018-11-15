@@ -22,16 +22,21 @@
     <div class="form-group row margin-center bt_chon" style="margin-bottom: 10px;">
       <label for="example-text-input" class="col-2 col-form-label">Chọn Linh Vực Thi</label>
       <div class="col-2">
-        <%= f.input :id, label: false, wrapper: false, include_blank: false, as: :select,
-          collection: @realms.pluck(:name, :id), input_html: {class: "form-control"} %>
+        <%= select "realm", "id", @realms.pluck(:name, :id), {include_blank: false}, {class: "form-control"} %>
       </div>
     </div>
     <div class="form-group row margin-center bt_chon" style="margin-bottom: 10px;">
       <label for="example-text-input" class="col-2 col-form-label">Chọn Loại</label>
       <div class="col-2">
-        <%= f.input :id, label: false, wrapper: false, include_blank: false, as: :select,
-          collection: @realms.pluck(:name, :id), input_html: {class: "form-control"} %>
+        <%= select "realm_type", "id", @realm_types.pluck(:name, :id), {include_blank: false}, {class: "form-control"} %>
       </div>
     </div>
+    <div class="form-group row margin-center bt_chon" style="margin-bottom: 10px;">
+      <label for="example-text-input" class="col-2 col-form-label">Chọn Hạng Thi</label>
+      <div class="col-2">
+        <%= select "rank_type", "id", @rank_types.pluck(:name, :id), {include_blank: false}, {class: "form-control"} %>
+      </div>
+    </div>
+    <%= f.submit 'Save', class: "btn btn-default btn-close" %>
   <% end %>
 </div>

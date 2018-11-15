@@ -9,18 +9,18 @@ default: &default
 
 development:
   <<: *default
-  database: GP_development
+  database: TT_development
 
 test:
   <<: *default
-  database: GP_test
+  database: TT_test
 
 production:
   <<: *default
-  database: GP_production
+  database: TT_production
   username: GP
   password: <%= ENV['GP_DATABASE_PASSWORD'] %>
 
 staging:
   <<: *default
-  database: GP_staging
+  database: TT_staging
