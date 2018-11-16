@@ -1,0 +1,17 @@
+<tr class="odd gradeX tr-<%= user.id %>">
+  <td>
+    <%= index + 1 %>
+  </td>
+  <td class="center"><%= user.name %></td>
+  <td class="center"><%= user.email %></td>
+  <td class="center"><%= user.number_phone %></td>
+  <td class="center"><%= user.birthday %></td>
+  <td class="center">
+    <a href="<%= edit_admin_user_path user %>" class="edit_modal_post">
+      <i class="fa fa-edit fa-fw"></i>
+    </a>
+    <%= link_to admin_user_path(user), method: :delete, remote: true, data: { confirm: 'Bạn chắc chắn muốn xóa User này?' } do %>
+      <i class="fa fa-trash-o fa-fw"></i>
+    <% end %>
+  </td>
+</tr>

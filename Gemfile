@@ -41,6 +41,8 @@ gem 'capistrano-bundler'
 gem 'capistrano-rvm'
 gem "unicorn"
 gem "capistrano3-unicorn"
+gem "roo"
+gem "activerecord-import"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

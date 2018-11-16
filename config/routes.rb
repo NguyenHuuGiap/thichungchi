@@ -13,6 +13,12 @@ Rails.application.routes.draw do
     resources :category
     resources :genealogy
     resources :admins
+    resources :users do
+      collection do
+        post :import
+        get :export
+      end
+    end
     resources :post
     resources :upload_video
     resources :upload_image
