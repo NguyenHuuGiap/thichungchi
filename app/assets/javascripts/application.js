@@ -12,6 +12,7 @@
 //
 //= require jquery.min
 //= require jquery_ujs
+//= require jquery-ui
 //= require jquery.fancybox.min
 //= require jquery.nestable
 //= require zoom-img
@@ -35,5 +36,6 @@
 //= require init.js
 //= require jquery.countdownTimer.js
 //= require tracnghiem.js
+//= require tracnghiem_ngu.js
 //= require sweet-alert.js
 //= require jquery.tooltip

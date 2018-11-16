@@ -14,6 +14,7 @@ class ExamsController < ApplicationController
   end
 
   def show
+    @questions = current_user.exams.working.first.questions
   end
 
   private

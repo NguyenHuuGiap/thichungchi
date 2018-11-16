@@ -1,0 +1,62 @@
+<fieldset class="cau_so_<%= index + 1 %>" style="text-align: center;">
+  <h1 class="title_cau">Câu số <%= index + 1 %> : <span style="float: right;font-weight: normal;color: #383838;font-size: 15px;margin-top: -3px;"></span></h1>
+  <div class="cau_hoi">
+    <div>
+      <div>
+        <div>
+          <div>
+            <div class="wr_content_ch">
+              <%= question.content %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wr_dap_an">
+    <% question.answers.order(:created_at).each_with_index do |answer, index| %>
+      <%
+        name_style = case
+        when index.zero?
+          "A"
+        when index == 1
+          "B"
+        when index == 2
+          "C"
+        when index == 3
+          "D"
+        when index == 4
+          "E"
+        when index == 5
+          "F"
+        else
+          "G"
+        end
+      %>
+
+      <div class="row_dap_an" id="<%= answer.id %>" dir="<%= question.id %>">
+        <%= radio_button_tag :answer_id, answer.id, id: "rd_#{name_style.downcase}_#{index +  1}" %>
+        <!-- <input id="rd_a_1" type="radio" name="cau_1"> -->
+        <label for="rd_<%= name_style.downcase %>_<%= index + 1 %>"><%= name_style %>. <%= answer.content %></label>
+      </div>
+    <% end %>
+    <!-- <div class="row_dap_an" id="A" dir="1">
+      <input id="rd_a_1" type="radio" name="cau_1">
+      <label for="rd_a_1">A. Có</label>
+    </div>
+    <div class="row_dap_an" id="B" dir="1">
+      <input id="rd_b_1" type="radio" name="cau_1">
+      <label for="rd_b_1">B. Không</label>
+    </div>
+    <div class="row_dap_an" id="C" dir="1">
+      <input id="rd_c_1" type="radio" name="cau_1">
+      <label for="rd_c_1">C. Có, nhưng phải có giấy khám sức khỏe đủ điều kiện của bác sỹ</label>
+    </div>
+    <div class="row_dap_an" id="D" dir="1">
+      <input id="rd_d_1" type="radio" name="cau_1">
+      <label for="rd_d_1">D. Có, nhưng chỉ được cấp chứng chỉ hành nghề thiết kế công trình xây dựng</label>
+    </div> -->
+  </div>
+  <div class="clear"></div>
+  <input type="button" name="next" class="next action-button" value="Câu kế tiếp">
+</fieldset>
