@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20181114081652) do
     t.integer "limit_time"
     t.integer "remain_time"
     t.integer "result"
+    t.integer "status", default: 1
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

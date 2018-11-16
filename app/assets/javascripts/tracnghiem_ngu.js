@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
 jQuery('body').on('click','.ket_thuc',function(){
         swal({
                                 title: "Bạn muốn hoàn tất bài thi",
@@ -13,6 +12,7 @@ jQuery('body').on('click','.ket_thuc',function(){
                                 closeOnCancel: false
         },
         function(isConfirm){
+          debugger
                 if (isConfirm) {
                     //swal("Hoàn tất bài thi", "Vui lòng nhấn nút dưới để xem kết quả", "success");
                     window.location = 'http://thichungchihanhnghe.com/ket-qua-thi.html?ld=DG01.html';
@@ -24,16 +24,17 @@ jQuery('body').on('click','.ket_thuc',function(){
 
 
 setInterval(function(){get_fb();}, 120000);
+get_fb();
  function get_fb(){
-    var feedback = $.ajax({
-        type: "POST",
-        url: "http://thichungchihanhnghe.com/enter/news",
-        async: false
-    }).success(function(){
-
-    }).responseText;
+    // var feedback = $.ajax({
+    //     type: "POST",
+    //     url: "/fback",
+    //     async: false
+    // }).success(function(){
+    //   debugger
+    // }).responseText;
     $.ajax({
-        url:'http://thichungchihanhnghe.com/enter/news',
+        url:'/fback',
             type:'HEAD',
             error: function()
             {
@@ -78,13 +79,13 @@ setInterval(function(){get_fb();}, 120000);
 
     // The hien thoi gian ----------------------------->
     $(function(){
-        $('#future_date').countdowntimer({
-            dateAndTime : twentyMinutesLater,
-            size : "lg",
-            regexpMatchFormat: "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
-            regexpReplaceWith: "$2 : $3 : $4",
-            expiryUrl: "http://thichungchihanhnghe.com/ket-qua-thi.html",
-        });
+        // $('#future_date').countdowntimer({
+        //     dateAndTime : twentyMinutesLater,
+        //     size : "lg",
+        //     regexpMatchFormat: "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
+        //     regexpReplaceWith: "$2 : $3 : $4",
+        //     expiryUrl: "http://thichungchihanhnghe.com/ket-qua-thi.html",
+        // });
     });
 
     // The hien da xem ------------------------------->
@@ -94,14 +95,15 @@ setInterval(function(){get_fb();}, 120000);
         jQuery('.wr_dap_an .row_dap_an').click(function(){
             var $tra_loi = jQuery(this).attr('id');
             var $cau_so  = jQuery(this).attr('dir');
-            jQuery.ajax({
-                type: "POST",
-                url: "http://thichungchihanhnghe.com/baithi/tra_loi/",
-                data: {tra_loi:$tra_loi,cau_so:$cau_so,hoc_vien_id:$hoc_vien_id,kythi_id:$kythi_id},
-                success: function(html){
-
-                }
-            });
+            debugger
+            // jQuery.ajax({
+            //     type: "POST",
+            //     url: "http://thichungchihanhnghe.com/baithi/tra_loi/",
+            //     data: {tra_loi:$tra_loi,cau_so:$cau_so,hoc_vien_id:$hoc_vien_id,kythi_id:$kythi_id},
+            //     success: function(html){
+            //
+            //     }
+            // });
         });
     });
 });

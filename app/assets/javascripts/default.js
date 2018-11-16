@@ -90,11 +90,3 @@ function carousel() {
     // x[myIndex-1].style.display = "block";
     setTimeout(carousel, 5500);
 }
-
-
-
-//select2
-
-$( "#exam_id" ).select2({
-    theme: "bootstrap"
-});

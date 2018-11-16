@@ -34,6 +34,7 @@ gem "jquery-rails"
 gem "simple_form"
 gem "cloudinary"
 gem 'mysql2'
+gem 'jquery-ui-rails'
 
 gem 'capistrano-rails'
 gem 'capistrano-bundler'

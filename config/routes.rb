@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   #   resources :post
   # end
   # resources :gioi_thieu, only: :index
+  resources :fback, only: :index
   resources :exams
   namespace :admin do
     root "category#index"

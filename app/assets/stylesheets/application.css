@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require jquery.fancybox.min
+ *= require jquery-ui
  *= require bootstrap.min
  *= require bootstrap-select.min
  *= require jquery.nestable
