@@ -93,17 +93,19 @@ get_fb();
     // The hien lam bai ----------------------------->
     jQuery(document).ready(function(){
         jQuery('.wr_dap_an .row_dap_an').click(function(){
-            var $tra_loi = jQuery(this).attr('id');
-            var $cau_so  = jQuery(this).attr('dir');
+            var answer = jQuery(this).attr('id');
+            var question  = jQuery(this).attr('dir');
+            var url = window.location.pathname
+            var exam_id = url.substring(url.lastIndexOf('/') + 1);
             debugger
-            // jQuery.ajax({
-            //     type: "POST",
-            //     url: "http://thichungchihanhnghe.com/baithi/tra_loi/",
-            //     data: {tra_loi:$tra_loi,cau_so:$cau_so,hoc_vien_id:$hoc_vien_id,kythi_id:$kythi_id},
-            //     success: function(html){
-            //
-            //     }
-            // });
+            jQuery.ajax({
+                type: "PUT",
+                url: "/exam_question/" + exam_id,
+                data: {answer: answer, question: question},
+                success: function(data){
+                  debugger
+                }
+            });
         });
     });
 });

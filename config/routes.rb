@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # resources :gioi_thieu, only: :index
   resources :fback, only: :index
   resources :exams
+  resources :exam_question
   namespace :admin do
     root "category#index"
     resources :category
