@@ -39,3 +39,6 @@
 //= require tracnghiem_ngu.js
 //= require sweet-alert.js
 //= require jquery.tooltip
+//= require jquery.datetimepicker.full.min
+
+//= require commons

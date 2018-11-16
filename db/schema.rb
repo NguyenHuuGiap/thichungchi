@@ -15,6 +15,13 @@ ActiveRecord::Schema.define(version: 20181114081652) do
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "name"
+    t.text "address"
+    t.string "number_phone"
+    t.integer "gender", default: 0
+    t.integer "state", default: 0
+    t.date "birthday"
+    t.string "avatar"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -166,9 +173,15 @@ ActiveRecord::Schema.define(version: 20181114081652) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "number_phone", default: "", null: false
+    t.string "number_phone"
     t.string "email", default: ""
     t.string "encrypted_password", default: "", null: false
+    t.string "name"
+    t.text "address"
+    t.integer "gender", default: 0
+    t.integer "state", default: 0
+    t.date "birthday"
+    t.string "avatar"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

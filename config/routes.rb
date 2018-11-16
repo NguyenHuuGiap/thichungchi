@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     root "category#index"
     resources :category
     resources :genealogy
-    resources :admin
+    resources :admins
     resources :post
     resources :upload_video
     resources :upload_image

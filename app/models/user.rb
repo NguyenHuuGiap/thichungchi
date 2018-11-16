@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
+  enum gender: {female: 0, male: 1, other: 2}
+
   attr_accessor :login
 
   def email_required?
