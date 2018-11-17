@@ -3,7 +3,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: 102120266
+  password: 111123
   # socket: localhost
   host: 127.0.0.1
 

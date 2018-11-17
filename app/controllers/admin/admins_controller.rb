@@ -1,5 +1,4 @@
 class Admin::AdminsController < Admin::BaseController
-  before_action :load_admin_new, only: [:new, :create]
   before_action :load_admin, only: [:edit, :update, :destroy]
 
   def index

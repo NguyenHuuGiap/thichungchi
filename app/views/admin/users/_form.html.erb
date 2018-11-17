@@ -1,0 +1,49 @@
+<%= simple_form_for [:admin, @user], html: {class: "form"} do |f| %>
+  <div class="modal-body">
+    <div class="form-group row margin-center">
+      <div class="col-md-offset-1 col-md-10">
+        <%= f.input :name, input_html: {class: "form-control", label: true} %>
+      </div>
+    </div>
+    <div class="form-group row margin-center m-top-20">
+      <div class="col-md-offset-1 col-md-10">
+        <%= f.input :email, input_html: {class: "form-control", label: true} %>
+      </div>
+    </div>
+    <div class="form-group row margin-center m-top-20">
+      <div class="col-md-offset-1 col-md-10">
+        <%= f.input :number_phone, input_html: {class: "form-control", label: true} %>
+      </div>
+    </div>
+    <div class="form-group row margin-center m-top-20">
+      <div class="col-md-offset-1 col-md-10">
+        <%= f.label :birthday %>
+      </div>
+      <div class="clear-both col-md-offset-1 col-md-2">
+        <%= text_field :user, :birthday, class: "form-control date-picker" %>
+      </div>
+    </div>
+    <div class="form-group row margin-center m-top-20">
+      <div class="col-md-offset-1 col-md-10">
+        <%= f.label :gender %>
+      </div>
+      <div class="clear-both col-md-offset-1 col-md-10">
+        <% Admin.genders.keys.each do |key| %>
+          <%= f.radio_button :gender, key, checked: (f.object.gender == key) %>
+          <%= t "admin.admins.#{key}" %>
+          &nbsp;&nbsp;&nbsp;
+        <% end %>
+      </div>
+    </div>
+    <div class="form-group row margin-center m-top-20">
+      <div class="col-md-offset-1 col-md-10">
+        <%= f.input :address, as: :text, input_html: {class: "form-control", label: true, rows: 5} %>
+      </div>
+    </div>
+    <div class="form-group row margin-center m-top-20">
+      <div class="col-md-offset-1 col-md-3">
+        <%= f.submit 'Save', class: "btn btn-default btn-close" %>
+      </div>
+    </div>
+  </div>
+<% end %>
